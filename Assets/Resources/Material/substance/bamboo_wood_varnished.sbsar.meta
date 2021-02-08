@@ -5,7 +5,7 @@ ScriptedImporter:
   externalObjects: {}
   serializedVersion: 2
   userData: 
-  assetBundleName: bamboo_wood_varnished
+  assetBundleName: bamboo wood varnished
   assetBundleVariant: 
   script: {fileID: 232528478, guid: 43a8bbf65be290d44ba52b94476242b9, type: 3}
   version: 29
@@ -17,8 +17,9 @@ ScriptedImporter:
     generateAllOutputs: 0
     generateMipMaps: 1
     preset: " <sbspreset pkgurl=\"pkg://bamboo_wood_varnished\" label=\"\" >\n  <presetinput
-      identifier=\"$outputsize\" uid=\"856481663\" type=\"8\" value=\"9,9\" />\n
-      </sbspreset>\n"
+      identifier=\"$outputsize\" uid=\"856481663\" type=\"8\" value=\"11,11\" />\n 
+      <presetinput identifier=\"wood_color\" uid=\"1530916983\" type=\"2\" value=\"0.556604,0.412876,0.249422\"
+      />\n </sbspreset>\n"
     shaderName: Universal Render Pipeline/Lit
     materialProperties:
       shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
@@ -26,11 +27,11 @@ ScriptedImporter:
       lightmapFlags: 4
       enableInstancingVariants: 0
       doubleSidedGI: 0
-      customRenderQueue: -1
+      customRenderQueue: 2000
       texEnvs:
       - name: _BaseMap
         texture: {fileID: 7427310238602219783, guid: b1e037606deaa8a439ef443141d84a4c, type: 3}
-        scale: {x: 1, y: 1}
+        scale: {x: 2, y: 2}
         offset: {x: 0, y: 0}
       - name: _BumpMap
         texture: {fileID: -1373922441779522468, guid: b1e037606deaa8a439ef443141d84a4c, type: 3}
@@ -42,7 +43,7 @@ ScriptedImporter:
         offset: {x: 0, y: 0}
       - name: _MainTex
         texture: {instanceID: 0}
-        scale: {x: 1, y: 1}
+        scale: {x: 2, y: 2}
         offset: {x: 0, y: 0}
       - name: _MetallicGlossMap
         texture: {fileID: -6538060112239828630, guid: b1e037606deaa8a439ef443141d84a4c, type: 3}
@@ -279,8 +280,8 @@ ScriptedImporter:
     - label: Default
       bOverride: 0
       bLockRatio: 1
-      textureWidth: 512
-      textureHeight: 512
+      textureWidth: 2048
+      textureHeight: 2048
       textureFormatMode: 0
       normalCompressed: 0
       bGenerateOnLoad: 1

@@ -1488,7 +1488,7 @@ public class MenuGenerator : MonoBehaviour
 
     void uebergiebParameterAusMenueInnentuerInMenueKonfigurator(List<T_Innentuer> ergebnisInnentuer)
     {
-        MaterialList materialListeFuerDieseSpalte;
+        MaterialList [] materialListeFuerDieseSpalte;
         //Debug.Log("ergebnisInnentuer :" + ergebnisInnentuer.Count().ToString());
 
         aktuelleAnzeigeKonfigurator.InfoText = "Innentür";
@@ -1510,71 +1510,71 @@ public class MenuGenerator : MonoBehaviour
             aktuelleAnzeigeKonfigurator.ZeileHeader[0] = ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Zarge;
             aktuelleAnzeigeKonfigurator.ZeileDetail[0] = tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Zarge).Detail;
             materialListeFuerDieseSpalte = ermitteleMaterialien(tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Zarge).MAT);
-            aktuelleAnzeigeKonfigurator.AktuellesMaterialName[0] = materialListeFuerDieseSpalte.Mat1[aktuelleAnzeigeKonfigurator.AktuellesMaterialIndex[0]];
-            aktuelleAnzeigeKonfigurator.AnzahlMaterialien[0] = materialListeFuerDieseSpalte.Mat1.Count();
+            aktuelleAnzeigeKonfigurator.AktuellesMaterialName[0] = materialListeFuerDieseSpalte[0].Mat1[aktuelleAnzeigeKonfigurator.AktuellesMaterialIndex[0]];
+            aktuelleAnzeigeKonfigurator.AnzahlMaterialien[0] = materialListeFuerDieseSpalte[0].Mat1.Count();
 
             // Zeile 2 Tuerblatt
             aktuelleAnzeigeKonfigurator.ZeileHeader[1] = ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Tuerblatt;
             aktuelleAnzeigeKonfigurator.ZeileDetail[1] = tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Tuerblatt).Detail;
             materialListeFuerDieseSpalte = ermitteleMaterialien(tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Tuerblatt).MAT);
-            aktuelleAnzeigeKonfigurator.AktuellesMaterialName[1] = materialListeFuerDieseSpalte.Mat1[aktuelleAnzeigeKonfigurator.AktuellesMaterialIndex[1]];
-            aktuelleAnzeigeKonfigurator.AnzahlMaterialien[1] = materialListeFuerDieseSpalte.Mat1.Count();
+            aktuelleAnzeigeKonfigurator.AktuellesMaterialName[1] = materialListeFuerDieseSpalte[0].Mat1[aktuelleAnzeigeKonfigurator.AktuellesMaterialIndex[1]];
+            aktuelleAnzeigeKonfigurator.AnzahlMaterialien[1] = materialListeFuerDieseSpalte[0].Mat1.Count();
 
             // Zeile 3 DrueckerFalz
             aktuelleAnzeigeKonfigurator.ZeileHeader[2] = ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].DrueckerFalz;
             aktuelleAnzeigeKonfigurator.ZeileDetail[2] = tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].DrueckerFalz).Detail;
             materialListeFuerDieseSpalte = ermitteleMaterialien(tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].DrueckerFalz).MAT);
-            aktuelleAnzeigeKonfigurator.AktuellesMaterialName[2] = materialListeFuerDieseSpalte.Mat1[aktuelleAnzeigeKonfigurator.AktuellesMaterialIndex[2]];
-            aktuelleAnzeigeKonfigurator.AnzahlMaterialien[2] = materialListeFuerDieseSpalte.Mat1.Count();
+            aktuelleAnzeigeKonfigurator.AktuellesMaterialName[2] = materialListeFuerDieseSpalte[0].Mat1[aktuelleAnzeigeKonfigurator.AktuellesMaterialIndex[2]];
+            aktuelleAnzeigeKonfigurator.AnzahlMaterialien[2] = materialListeFuerDieseSpalte[0].Mat1.Count();
 
             // Zeile 4 DrueckerFalz
             aktuelleAnzeigeKonfigurator.ZeileHeader[3] = ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].DrueckerZier;
             aktuelleAnzeigeKonfigurator.ZeileDetail[3] = tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].DrueckerZier).Detail;
             materialListeFuerDieseSpalte = ermitteleMaterialien(tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].DrueckerZier).MAT);
-            aktuelleAnzeigeKonfigurator.AktuellesMaterialName[3] = materialListeFuerDieseSpalte.Mat1[aktuelleAnzeigeKonfigurator.AktuellesMaterialIndex[3]];
-            aktuelleAnzeigeKonfigurator.AnzahlMaterialien[3] = materialListeFuerDieseSpalte.Mat1.Count();
+            aktuelleAnzeigeKonfigurator.AktuellesMaterialName[3] = materialListeFuerDieseSpalte[0].Mat1[aktuelleAnzeigeKonfigurator.AktuellesMaterialIndex[3]];
+            aktuelleAnzeigeKonfigurator.AnzahlMaterialien[3] = materialListeFuerDieseSpalte[0].Mat1.Count();
 
             // Zeile 5 Band1
             aktuelleAnzeigeKonfigurator.ZeileHeader[4] = ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Band1;
             aktuelleAnzeigeKonfigurator.ZeileDetail[4] = tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Band1).Detail;
             materialListeFuerDieseSpalte = ermitteleMaterialien(tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Band1).MAT);
-            aktuelleAnzeigeKonfigurator.AktuellesMaterialName[4] = materialListeFuerDieseSpalte.Mat1[aktuelleAnzeigeKonfigurator.AktuellesMaterialIndex[4]];
-            aktuelleAnzeigeKonfigurator.AnzahlMaterialien[4] = materialListeFuerDieseSpalte.Mat1.Count();
+            aktuelleAnzeigeKonfigurator.AktuellesMaterialName[4] = materialListeFuerDieseSpalte[0].Mat1[aktuelleAnzeigeKonfigurator.AktuellesMaterialIndex[4]];
+            aktuelleAnzeigeKonfigurator.AnzahlMaterialien[4] = materialListeFuerDieseSpalte[0].Mat1.Count();
 
             // Zeile 6 Band2
             aktuelleAnzeigeKonfigurator.ZeileHeader[5] = ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Band2;
             aktuelleAnzeigeKonfigurator.ZeileDetail[5] = tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Band2).Detail;
             materialListeFuerDieseSpalte = ermitteleMaterialien(tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Band2).MAT);
-            aktuelleAnzeigeKonfigurator.AktuellesMaterialName[5] = materialListeFuerDieseSpalte.Mat1[aktuelleAnzeigeKonfigurator.AktuellesMaterialIndex[5]];
-            aktuelleAnzeigeKonfigurator.AnzahlMaterialien[5] = materialListeFuerDieseSpalte.Mat1.Count();
+            aktuelleAnzeigeKonfigurator.AktuellesMaterialName[5] = materialListeFuerDieseSpalte[0].Mat1[aktuelleAnzeigeKonfigurator.AktuellesMaterialIndex[5]];
+            aktuelleAnzeigeKonfigurator.AnzahlMaterialien[5] = materialListeFuerDieseSpalte[0].Mat1.Count();
 
             // Zeile 7 Bandaufnahme1
             aktuelleAnzeigeKonfigurator.ZeileHeader[6] = ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Bandaufnahme1;
             aktuelleAnzeigeKonfigurator.ZeileDetail[6] = tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Bandaufnahme1).Detail;
             materialListeFuerDieseSpalte = ermitteleMaterialien(tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Bandaufnahme1).MAT);
-            aktuelleAnzeigeKonfigurator.AktuellesMaterialName[6] = materialListeFuerDieseSpalte.Mat1[aktuelleAnzeigeKonfigurator.AktuellesMaterialIndex[6]];
-            aktuelleAnzeigeKonfigurator.AnzahlMaterialien[6] = materialListeFuerDieseSpalte.Mat1.Count();
+            aktuelleAnzeigeKonfigurator.AktuellesMaterialName[6] = materialListeFuerDieseSpalte[0].Mat1[aktuelleAnzeigeKonfigurator.AktuellesMaterialIndex[6]];
+            aktuelleAnzeigeKonfigurator.AnzahlMaterialien[6] = materialListeFuerDieseSpalte[0].Mat1.Count();
 
             // Zeile 8 Bandaufnahme2
             aktuelleAnzeigeKonfigurator.ZeileHeader[7] = ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Bandaufnahme2;
             aktuelleAnzeigeKonfigurator.ZeileDetail[7] = tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Bandaufnahme2).Detail;
             materialListeFuerDieseSpalte = ermitteleMaterialien(tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Bandaufnahme2).MAT);
-            aktuelleAnzeigeKonfigurator.AktuellesMaterialName[7] = materialListeFuerDieseSpalte.Mat1[aktuelleAnzeigeKonfigurator.AktuellesMaterialIndex[7]];
-            aktuelleAnzeigeKonfigurator.AnzahlMaterialien[7] = materialListeFuerDieseSpalte.Mat1.Count();
+            aktuelleAnzeigeKonfigurator.AktuellesMaterialName[7] = materialListeFuerDieseSpalte[0].Mat1[aktuelleAnzeigeKonfigurator.AktuellesMaterialIndex[7]];
+            aktuelleAnzeigeKonfigurator.AnzahlMaterialien[7] = materialListeFuerDieseSpalte[0].Mat1.Count();
 
             // Zeile 9 Schlosskasten
             aktuelleAnzeigeKonfigurator.ZeileHeader[8] = ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Schlosskasten;
             aktuelleAnzeigeKonfigurator.ZeileDetail[8] = tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Schlosskasten).Detail;
             materialListeFuerDieseSpalte = ermitteleMaterialien(tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Schlosskasten).MAT);
-            aktuelleAnzeigeKonfigurator.AktuellesMaterialName[8] = materialListeFuerDieseSpalte.Mat1[aktuelleAnzeigeKonfigurator.AktuellesMaterialIndex[8]];
-            aktuelleAnzeigeKonfigurator.AnzahlMaterialien[8] = materialListeFuerDieseSpalte.Mat1.Count();
+            aktuelleAnzeigeKonfigurator.AktuellesMaterialName[8] = materialListeFuerDieseSpalte[0].Mat1[aktuelleAnzeigeKonfigurator.AktuellesMaterialIndex[8]];
+            aktuelleAnzeigeKonfigurator.AnzahlMaterialien[8] = materialListeFuerDieseSpalte[0].Mat1.Count();
 
             // Zeile 10 Schliessblech
             aktuelleAnzeigeKonfigurator.ZeileHeader[9] = ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Schliessblech;
             aktuelleAnzeigeKonfigurator.ZeileDetail[9] = tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Schliessblech).Detail;
             materialListeFuerDieseSpalte = ermitteleMaterialien(tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Schliessblech).MAT);
-            aktuelleAnzeigeKonfigurator.AktuellesMaterialName[9] = materialListeFuerDieseSpalte.Mat1[aktuelleAnzeigeKonfigurator.AktuellesMaterialIndex[9]];
-            aktuelleAnzeigeKonfigurator.AnzahlMaterialien[9] = materialListeFuerDieseSpalte.Mat1.Count();
+            aktuelleAnzeigeKonfigurator.AktuellesMaterialName[9] = materialListeFuerDieseSpalte[0].Mat1[aktuelleAnzeigeKonfigurator.AktuellesMaterialIndex[9]];
+            aktuelleAnzeigeKonfigurator.AnzahlMaterialien[9] = materialListeFuerDieseSpalte[0].Mat1.Count();
 
             //// Zeile 11 Schwelle
             //aktuelleAnzeigeKonfigurator.ZeileHeader[10] = ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Schwelle;
@@ -1587,6 +1587,109 @@ public class MenuGenerator : MonoBehaviour
             updateKonfigurator();
         }
     }
+
+
+    //void uebergiebParameterAusMenueInnentuerInMenueKonfigurator2(List<T_Innentuer> ergebnisInnentuer)
+    //{
+    //    MaterialList materialListeFuerDieseSpalte;
+    //    //Debug.Log("ergebnisInnentuer :" + ergebnisInnentuer.Count().ToString());
+
+    //    aktuelleAnzeigeKonfigurator.InfoText = "Innentür";
+    //    if (ergebnisInnentuer.Count() == 0)
+    //    {
+    //        aktuelleAnzeigeKonfigurator.InfoText += "\nKeine Treffer bei den aktuellen Suchkriterien.";
+    //        for (int i = 1; i <= guiKonfigurator.ZeileContainerAnzahlZeilen; i++)
+    //        {
+    //            GameObject.Find("KonfiguratorZeileContainer" + i.ToString()).GetComponent<CanvasGroup>().alpha = 0.0f;
+    //        }
+    //    }
+    //    else
+    //    {
+
+    //        aktuelleAnzeigeKonfigurator.InfoText += " (" + (aktuelleGetoggelteInnentuer.Index + 1).ToString() + " von " + ergebnisInnentuer.Count().ToString() + ")";
+    //        aktuelleAnzeigeKonfigurator.InfoText += "\n" + ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Id;
+
+    //        // Zeile 1 Zarge
+    //        aktuelleAnzeigeKonfigurator.ZeileHeader[0] = ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Zarge;
+    //        aktuelleAnzeigeKonfigurator.ZeileDetail[0] = tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Zarge).Detail;
+    //        materialListeFuerDieseSpalte = ermitteleMaterialien(tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Zarge).MAT);
+    //        aktuelleAnzeigeKonfigurator.AktuellesMaterialName[0] = materialListeFuerDieseSpalte.Mat1[aktuelleAnzeigeKonfigurator.AktuellesMaterialIndex[0]];
+    //        aktuelleAnzeigeKonfigurator.AnzahlMaterialien[0] = materialListeFuerDieseSpalte.Mat1.Count();
+
+    //        // Zeile 2 Tuerblatt
+    //        aktuelleAnzeigeKonfigurator.ZeileHeader[1] = ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Tuerblatt;
+    //        aktuelleAnzeigeKonfigurator.ZeileDetail[1] = tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Tuerblatt).Detail;
+    //        materialListeFuerDieseSpalte = ermitteleMaterialien(tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Tuerblatt).MAT);
+    //        aktuelleAnzeigeKonfigurator.AktuellesMaterialName[1] = materialListeFuerDieseSpalte.Mat1[aktuelleAnzeigeKonfigurator.AktuellesMaterialIndex[1]];
+    //        aktuelleAnzeigeKonfigurator.AnzahlMaterialien[1] = materialListeFuerDieseSpalte.Mat1.Count();
+
+    //        // Zeile 3 DrueckerFalz
+    //        aktuelleAnzeigeKonfigurator.ZeileHeader[2] = ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].DrueckerFalz;
+    //        aktuelleAnzeigeKonfigurator.ZeileDetail[2] = tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].DrueckerFalz).Detail;
+    //        materialListeFuerDieseSpalte = ermitteleMaterialien(tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].DrueckerFalz).MAT);
+    //        aktuelleAnzeigeKonfigurator.AktuellesMaterialName[2] = materialListeFuerDieseSpalte.Mat1[aktuelleAnzeigeKonfigurator.AktuellesMaterialIndex[2]];
+    //        aktuelleAnzeigeKonfigurator.AnzahlMaterialien[2] = materialListeFuerDieseSpalte.Mat1.Count();
+
+    //        // Zeile 4 DrueckerFalz
+    //        aktuelleAnzeigeKonfigurator.ZeileHeader[3] = ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].DrueckerZier;
+    //        aktuelleAnzeigeKonfigurator.ZeileDetail[3] = tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].DrueckerZier).Detail;
+    //        materialListeFuerDieseSpalte = ermitteleMaterialien(tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].DrueckerZier).MAT);
+    //        aktuelleAnzeigeKonfigurator.AktuellesMaterialName[3] = materialListeFuerDieseSpalte.Mat1[aktuelleAnzeigeKonfigurator.AktuellesMaterialIndex[3]];
+    //        aktuelleAnzeigeKonfigurator.AnzahlMaterialien[3] = materialListeFuerDieseSpalte.Mat1.Count();
+
+    //        // Zeile 5 Band1
+    //        aktuelleAnzeigeKonfigurator.ZeileHeader[4] = ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Band1;
+    //        aktuelleAnzeigeKonfigurator.ZeileDetail[4] = tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Band1).Detail;
+    //        materialListeFuerDieseSpalte = ermitteleMaterialien(tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Band1).MAT);
+    //        aktuelleAnzeigeKonfigurator.AktuellesMaterialName[4] = materialListeFuerDieseSpalte.Mat1[aktuelleAnzeigeKonfigurator.AktuellesMaterialIndex[4]];
+    //        aktuelleAnzeigeKonfigurator.AnzahlMaterialien[4] = materialListeFuerDieseSpalte.Mat1.Count();
+
+    //        // Zeile 6 Band2
+    //        aktuelleAnzeigeKonfigurator.ZeileHeader[5] = ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Band2;
+    //        aktuelleAnzeigeKonfigurator.ZeileDetail[5] = tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Band2).Detail;
+    //        materialListeFuerDieseSpalte = ermitteleMaterialien(tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Band2).MAT);
+    //        aktuelleAnzeigeKonfigurator.AktuellesMaterialName[5] = materialListeFuerDieseSpalte.Mat1[aktuelleAnzeigeKonfigurator.AktuellesMaterialIndex[5]];
+    //        aktuelleAnzeigeKonfigurator.AnzahlMaterialien[5] = materialListeFuerDieseSpalte.Mat1.Count();
+
+    //        // Zeile 7 Bandaufnahme1
+    //        aktuelleAnzeigeKonfigurator.ZeileHeader[6] = ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Bandaufnahme1;
+    //        aktuelleAnzeigeKonfigurator.ZeileDetail[6] = tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Bandaufnahme1).Detail;
+    //        materialListeFuerDieseSpalte = ermitteleMaterialien(tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Bandaufnahme1).MAT);
+    //        aktuelleAnzeigeKonfigurator.AktuellesMaterialName[6] = materialListeFuerDieseSpalte.Mat1[aktuelleAnzeigeKonfigurator.AktuellesMaterialIndex[6]];
+    //        aktuelleAnzeigeKonfigurator.AnzahlMaterialien[6] = materialListeFuerDieseSpalte.Mat1.Count();
+
+    //        // Zeile 8 Bandaufnahme2
+    //        aktuelleAnzeigeKonfigurator.ZeileHeader[7] = ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Bandaufnahme2;
+    //        aktuelleAnzeigeKonfigurator.ZeileDetail[7] = tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Bandaufnahme2).Detail;
+    //        materialListeFuerDieseSpalte = ermitteleMaterialien(tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Bandaufnahme2).MAT);
+    //        aktuelleAnzeigeKonfigurator.AktuellesMaterialName[7] = materialListeFuerDieseSpalte.Mat1[aktuelleAnzeigeKonfigurator.AktuellesMaterialIndex[7]];
+    //        aktuelleAnzeigeKonfigurator.AnzahlMaterialien[7] = materialListeFuerDieseSpalte.Mat1.Count();
+
+    //        // Zeile 9 Schlosskasten
+    //        aktuelleAnzeigeKonfigurator.ZeileHeader[8] = ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Schlosskasten;
+    //        aktuelleAnzeigeKonfigurator.ZeileDetail[8] = tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Schlosskasten).Detail;
+    //        materialListeFuerDieseSpalte = ermitteleMaterialien(tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Schlosskasten).MAT);
+    //        aktuelleAnzeigeKonfigurator.AktuellesMaterialName[8] = materialListeFuerDieseSpalte.Mat1[aktuelleAnzeigeKonfigurator.AktuellesMaterialIndex[8]];
+    //        aktuelleAnzeigeKonfigurator.AnzahlMaterialien[8] = materialListeFuerDieseSpalte.Mat1.Count();
+
+    //        // Zeile 10 Schliessblech
+    //        aktuelleAnzeigeKonfigurator.ZeileHeader[9] = ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Schliessblech;
+    //        aktuelleAnzeigeKonfigurator.ZeileDetail[9] = tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Schliessblech).Detail;
+    //        materialListeFuerDieseSpalte = ermitteleMaterialien(tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Schliessblech).MAT);
+    //        aktuelleAnzeigeKonfigurator.AktuellesMaterialName[9] = materialListeFuerDieseSpalte.Mat1[aktuelleAnzeigeKonfigurator.AktuellesMaterialIndex[9]];
+    //        aktuelleAnzeigeKonfigurator.AnzahlMaterialien[9] = materialListeFuerDieseSpalte.Mat1.Count();
+
+    //        //// Zeile 11 Schwelle
+    //        //aktuelleAnzeigeKonfigurator.ZeileHeader[10] = ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Schwelle;
+    //        //aktuelleAnzeigeKonfigurator.ZeileDetail[10] = tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Schwelle).Detail;
+    //        //materialListeFuerDieseSpalte = ermitteleMaterialien(tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Schwelle).MAT);
+    //        //aktuelleAnzeigeKonfigurator.AktuellesMaterialName[10] = materialListeFuerDieseSpalte.Mat1[aktuelleAnzeigeKonfigurator.AktuellesMaterialIndex[10]];
+    //        //aktuelleAnzeigeKonfigurator.AnzahlMaterialien[10] = materialListeFuerDieseSpalte.Mat1.Count();
+
+
+    //        updateKonfigurator();
+    //    }
+    //}
 
 
     void toggleInnentuerImKonfigurator()
@@ -1806,14 +1909,18 @@ public class MenuGenerator : MonoBehaviour
 
 
 
-    MaterialList ermitteleMaterialien(string matJsonString)
+    MaterialList ermitteleMaterialien2(string matJsonString)
     {
         MaterialList materialListe = JsonConvert.DeserializeObject<MaterialList>(matJsonString);
         return materialListe;
     }
 
 
-
+    MaterialList[] ermitteleMaterialien(string matJsonString)
+    {
+        MaterialList [] materialListe = JsonConvert.DeserializeObject<MaterialList [] >(matJsonString);
+        return materialListe;
+    }
 
 
     // ---------------------------------------------------------------------------------------------------

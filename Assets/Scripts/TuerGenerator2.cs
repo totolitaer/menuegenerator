@@ -47,15 +47,124 @@ public class TuerGenerator2 : MonoBehaviour
     private bool toggleBoolInOut;
 
     private int tasteSiebenToggle = -1;
-    string[,] os = new string[4, 11] {
-        { "Tuerblatt_1875x625", "Zargenschnitt_001_1875x625_WS115_BB50", "Haefele_900_81_050", "Haefele_900_81_050", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
-        { "Tuerblatt_1875x750", "Zargenschnitt_001_1875x750_WS115_BB50", "Haefele_900_81_050", "Haefele_900_81_050", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
-        { "Tuerblatt_2000x1000", "Zargenschnitt_001_2000x1000_WS115_BB50", "Haefele_900_81_108", "Haefele_900_81_108", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
-        { "Tuerblatt_2125x1125", "Zargenschnitt_001_2125x1125_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" }
+    string[,] os = new string[97, 11] {
+        { "KILSGAARD_Typ20_01_LA_1985_735_0", "Zargenschnitt_001_2000x750_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_01_LA_1985_735_8", "Zargenschnitt_001_2000x750_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_01_LA_1985_860_0", "Zargenschnitt_001_2000x875_WS115_BB50", "Haefele_900_81_050", "Haefele_900_81_050", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_01_LA_1985_860_8", "Zargenschnitt_001_2000x875_WS115_BB50", "Haefele_900_81_050", "Haefele_900_81_050", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_01_LA_1985_985_0", "Zargenschnitt_001_2000x1000_WS115_BB50", "Haefele_900_81_050", "Haefele_900_81_050", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_01_LA_1985_985_8", "Zargenschnitt_001_2000x1000_WS115_BB50", "Haefele_900_81_050", "Haefele_900_81_050", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_01_LA_2110_735_0", "Zargenschnitt_001_2125x750_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_01_LA_2110_735_8", "Zargenschnitt_001_2125x750_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_01_LA_2110_860_0", "Zargenschnitt_001_2125x875_WS115_BB50", "Haefele_900_81_108", "Haefele_900_81_108", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_01_LA_2110_860_8", "Zargenschnitt_001_2125x875_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_01_LA_2110_985_0", "Zargenschnitt_001_2125x1000_WS115_BB50", "Haefele_900_81_108", "Haefele_900_81_108", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_01_LA_2110_985_8", "Zargenschnitt_001_2125x1000_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+//         
+        { "KILSGAARD_Typ20_04_SP6_1985_735_0", "Zargenschnitt_001_2000x750_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_04_SP6_1985_735_8", "Zargenschnitt_001_2000x750_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_04_SP6_1985_860_0", "Zargenschnitt_001_2000x875_WS115_BB50", "Haefele_900_81_050", "Haefele_900_81_050", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_04_SP6_1985_860_8", "Zargenschnitt_001_2000x875_WS115_BB50", "Haefele_900_81_050", "Haefele_900_81_050", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_04_SP6_1985_985_0", "Zargenschnitt_001_2000x1000_WS115_BB50", "Haefele_900_81_050", "Haefele_900_81_050", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_04_SP6_1985_985_8", "Zargenschnitt_001_2000x1000_WS115_BB50", "Haefele_900_81_050", "Haefele_900_81_050", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_04_SP6_2110_735_0", "Zargenschnitt_001_2125x750_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_04_SP6_2110_735_8", "Zargenschnitt_001_2125x750_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_04_SP6_2110_860_0", "Zargenschnitt_001_2125x875_WS115_BB50", "Haefele_900_81_108", "Haefele_900_81_108", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_04_SP6_2110_860_8", "Zargenschnitt_001_2125x875_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_04_SP6_2110_985_0", "Zargenschnitt_001_2125x1000_WS115_BB50", "Haefele_900_81_108", "Haefele_900_81_108", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_04_SP6_2110_985_8", "Zargenschnitt_001_2125x1000_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+// 
+        { "KILSGAARD_Typ20_04_LA2_1985_735_0", "Zargenschnitt_001_2000x750_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_04_LA2_1985_735_8", "Zargenschnitt_001_2000x750_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_04_LA2_1985_860_0", "Zargenschnitt_001_2000x875_WS115_BB50", "Haefele_900_81_050", "Haefele_900_81_050", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_04_LA2_1985_860_8", "Zargenschnitt_001_2000x875_WS115_BB50", "Haefele_900_81_050", "Haefele_900_81_050", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_04_LA2_1985_985_0", "Zargenschnitt_001_2000x1000_WS115_BB50", "Haefele_900_81_050", "Haefele_900_81_050", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_04_LA2_1985_985_8", "Zargenschnitt_001_2000x1000_WS115_BB50", "Haefele_900_81_050", "Haefele_900_81_050", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_04_LA2_2110_735_0", "Zargenschnitt_001_2125x750_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_04_LA2_2110_735_8", "Zargenschnitt_001_2125x750_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_04_LA2_2110_860_0", "Zargenschnitt_001_2125x875_WS115_BB50", "Haefele_900_81_108", "Haefele_900_81_108", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_04_LA2_2110_860_8", "Zargenschnitt_001_2125x875_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_04_LA2_2110_985_0", "Zargenschnitt_001_2125x1000_WS115_BB50", "Haefele_900_81_108", "Haefele_900_81_108", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_04_LA2_2110_985_8", "Zargenschnitt_001_2125x1000_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+//         
+        { "Standard_TB_1985_735_0", "Zargenschnitt_001_2000x750_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "Standard_TB_1985_735_8", "Zargenschnitt_001_2000x750_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "Standard_TB_1985_860_0", "Zargenschnitt_001_2000x875_WS115_BB50", "Haefele_900_81_050", "Haefele_900_81_050", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "Standard_TB_1985_860_8", "Zargenschnitt_001_2000x875_WS115_BB50", "Haefele_900_81_050", "Haefele_900_81_050", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "Standard_TB_1985_985_0", "Zargenschnitt_001_2000x1000_WS115_BB50", "Haefele_900_81_050", "Haefele_900_81_050", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "Standard_TB_1985_985_8", "Zargenschnitt_001_2000x1000_WS115_BB50", "Haefele_900_81_050", "Haefele_900_81_050", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "Standard_TB_2110_735_0", "Zargenschnitt_001_2125x750_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "Standard_TB_2110_735_8", "Zargenschnitt_001_2125x750_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "Standard_TB_2110_860_0", "Zargenschnitt_001_2125x875_WS115_BB50", "Haefele_900_81_108", "Haefele_900_81_108", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "Standard_TB_2110_860_8", "Zargenschnitt_001_2125x875_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "Standard_TB_2110_985_0", "Zargenschnitt_001_2125x1000_WS115_BB50", "Haefele_900_81_108", "Haefele_900_81_108", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "Standard_TB_2110_985_8", "Zargenschnitt_001_2125x1000_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+//  
+        { "Quer_4_1985_735_0", "Zargenschnitt_001_2000x750_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "Quer_4_1985_735_8", "Zargenschnitt_001_2000x750_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "Quer_4_1985_860_0", "Zargenschnitt_001_2000x875_WS115_BB50", "Haefele_900_81_050", "Haefele_900_81_050", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "Quer_4_1985_860_8", "Zargenschnitt_001_2000x875_WS115_BB50", "Haefele_900_81_050", "Haefele_900_81_050", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "Quer_4_1985_985_0", "Zargenschnitt_001_2000x1000_WS115_BB50", "Haefele_900_81_050", "Haefele_900_81_050", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "Quer_4_1985_985_8", "Zargenschnitt_001_2000x1000_WS115_BB50", "Haefele_900_81_050", "Haefele_900_81_050", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "Quer_4_2110_735_0", "Zargenschnitt_001_2125x750_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "Quer_4_2110_735_8", "Zargenschnitt_001_2125x750_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "Quer_4_2110_860_0", "Zargenschnitt_001_2125x875_WS115_BB50", "Haefele_900_81_108", "Haefele_900_81_108", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "Quer_4_2110_860_8", "Zargenschnitt_001_2125x875_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "Quer_4_2110_985_0", "Zargenschnitt_001_2125x1000_WS115_BB50", "Haefele_900_81_108", "Haefele_900_81_108", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "Quer_4_2110_985_8", "Zargenschnitt_001_2125x1000_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+// 
+        { "KILSGAARD_Typ20_02_1985_735_0", "Zargenschnitt_001_2000x750_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_02_1985_735_8", "Zargenschnitt_001_2000x750_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_02_1985_860_0", "Zargenschnitt_001_2000x875_WS115_BB50", "Haefele_900_81_050", "Haefele_900_81_050", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_02_1985_860_8", "Zargenschnitt_001_2000x875_WS115_BB50", "Haefele_900_81_050", "Haefele_900_81_050", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_02_1985_985_0", "Zargenschnitt_001_2000x1000_WS115_BB50", "Haefele_900_81_050", "Haefele_900_81_050", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_02_1985_985_8", "Zargenschnitt_001_2000x1000_WS115_BB50", "Haefele_900_81_050", "Haefele_900_81_050", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_02_2110_735_0", "Zargenschnitt_001_2125x750_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_02_2110_735_8", "Zargenschnitt_001_2125x750_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_02_2110_860_0", "Zargenschnitt_001_2125x875_WS115_BB50", "Haefele_900_81_108", "Haefele_900_81_108", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_02_2110_860_8", "Zargenschnitt_001_2125x875_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_02_2110_985_0", "Zargenschnitt_001_2125x1000_WS115_BB50", "Haefele_900_81_108", "Haefele_900_81_108", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_02_2110_985_8", "Zargenschnitt_001_2125x1000_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+//
+        { "KILSGAARD_Typ20_02_B_1985_735_0", "Zargenschnitt_001_2000x750_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_02_B_1985_735_8", "Zargenschnitt_001_2000x750_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_02_B_1985_860_0", "Zargenschnitt_001_2000x875_WS115_BB50", "Haefele_900_81_050", "Haefele_900_81_050", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_02_B_1985_860_8", "Zargenschnitt_001_2000x875_WS115_BB50", "Haefele_900_81_050", "Haefele_900_81_050", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_02_B_1985_985_0", "Zargenschnitt_001_2000x1000_WS115_BB50", "Haefele_900_81_050", "Haefele_900_81_050", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_02_B_1985_985_8", "Zargenschnitt_001_2000x1000_WS115_BB50", "Haefele_900_81_050", "Haefele_900_81_050", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_02_B_2110_735_0", "Zargenschnitt_001_2125x750_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_02_B_2110_735_8", "Zargenschnitt_001_2125x750_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_02_B_2110_860_0", "Zargenschnitt_001_2125x875_WS115_BB50", "Haefele_900_81_108", "Haefele_900_81_108", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_02_B_2110_860_8", "Zargenschnitt_001_2125x875_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_02_B_2110_985_0", "Zargenschnitt_001_2125x1000_WS115_BB50", "Haefele_900_81_108", "Haefele_900_81_108", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_02_B_2110_985_8", "Zargenschnitt_001_2125x1000_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+//
+        { "KILSGAARD_Typ20_04_1985_735_0", "Zargenschnitt_001_2000x750_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_04_1985_735_8", "Zargenschnitt_001_2000x750_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_04_1985_860_0", "Zargenschnitt_001_2000x875_WS115_BB50", "Haefele_900_81_050", "Haefele_900_81_050", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_04_1985_860_8", "Zargenschnitt_001_2000x875_WS115_BB50", "Haefele_900_81_050", "Haefele_900_81_050", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_04_1985_985_0", "Zargenschnitt_001_2000x1000_WS115_BB50", "Haefele_900_81_050", "Haefele_900_81_050", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_04_1985_985_8", "Zargenschnitt_001_2000x1000_WS115_BB50", "Haefele_900_81_050", "Haefele_900_81_050", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_04_2110_735_0", "Zargenschnitt_001_2125x750_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_04_2110_735_8", "Zargenschnitt_001_2125x750_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_04_2110_860_0", "Zargenschnitt_001_2125x875_WS115_BB50", "Haefele_900_81_108", "Haefele_900_81_108", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_04_2110_860_8", "Zargenschnitt_001_2125x875_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_04_2110_985_0", "Zargenschnitt_001_2125x1000_WS115_BB50", "Haefele_900_81_108", "Haefele_900_81_108", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+        { "KILSGAARD_Typ20_04_2110_985_8", "Zargenschnitt_001_2125x1000_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" },
+//
+        { "KILSGAARD_Typ20_04a_2110_985_8", "Zargenschnitt_001_2125x1000_WS115_BB50", "Haefele_900_81_290", "Haefele_900_81_290", "Band_001", "Band_001", "Bandaufnahme_001", "Bandaufnahme_001", "Schlosskasten_001", "Schliessblech_001", "" }
 
     };
 
-
+    string[,] materialien3 = new string[7, 3] {
+        { "Material/weiss",  "Material/03_Metall/03-2_Alluminium/M_2K_CC0T_Metal032_2K-JPG", "Material/Glas" },
+        { "Material/rot",  "Material/03_Metall/03-2_Alluminium/M_2K_CC0T_Metal032_2K-JPG", "Material/Glas" },
+        { "Material/04_Holz/04-1_pur/M_1K_3DTE_Wood_020",  "Material/03_Metall/03-2_Alluminium/M_2K_CC0T_Metal032_2K-JPG", "Material/Glas" },
+        { "Material/04_Holz/04-1_pur/M_2K_CC0T_Wood007_2K-JPG", "Material/03_Metall/03-2_Alluminium/M_2K_CC0T_Metal032_2K-JPG", "Material/Glas" },
+        { "Material/04_Holz/04-1_pur/M_2K_CC0T_Wood014_2K-JPG", "Material/03_Metall/03-2_Alluminium/M_2K_CC0T_Metal032_2K-JPG", "Material/Glas" },
+        { "Material/04_Holz/04-1_pur/M_2K_CC0T_Wood026_2K-JPG", "Material/03_Metall/03-2_Alluminium/M_2K_CC0T_Metal032_2K-JPG", "Material/Glas" },
+        { "Material/04_Holz/04-1_pur/M_2K_TCAN_wood_0009_2k_PYaK2S", "Material/03_Metall/03-2_Alluminium/M_2K_CC0T_Metal032_2K-JPG", "Material/Glas" }
+    };
 
     string[] materialien = {
         "Material/weiss",
@@ -186,6 +295,7 @@ public class TuerGenerator2 : MonoBehaviour
 
         //Initialisiere das Logging
         log.Initialisiere();
+
         //displayText = gui.GetComponent<Text>();
         //guiText = "Taste 1-3 = Scenenaufbau\n4 = Materialwechsel\n<- = Tür auf\n-> = Tür zu" + "";
     }
@@ -223,7 +333,8 @@ public class TuerGenerator2 : MonoBehaviour
         if (Input.GetKeyDown("3"))
         {
             guiText.text = "Taste 3\nMaterialwechsel";
-            toggleMaterial();
+            toggleMaterial3();
+            //toggleMaterial();
         }
 
         // Rotation
@@ -276,7 +387,8 @@ public class TuerGenerator2 : MonoBehaviour
 
         if (Input.GetKeyDown("4"))
         {
-            if (tasteSiebenToggle < 3)
+              
+            if (tasteSiebenToggle < (os.GetLength(0)-1))
             {
                 tasteSiebenToggle++;
             }
@@ -334,6 +446,13 @@ public class TuerGenerator2 : MonoBehaviour
             goNeuInHierarchie = new GameObject(objektElementeUndParents[i, 0]);
             MeshFilter meshFilter = goNeuInHierarchie.AddComponent<MeshFilter>();
             MeshRenderer meshRenderer = goNeuInHierarchie.AddComponent<MeshRenderer>();
+          
+            // NEWNEWNEW
+            //if (objektElementeUndParents[i, 0] == "3D_Tuerblatt")
+            //{
+                meshRenderer.materials = new Material[3];
+            //}
+
 
             // ordne jedem Bestandteil (child) dem jeweiligen parent GameObjekt zu
             GameObject.Find(objektElementeUndParents[i, 0]).transform.parent = GameObject.Find(objektElementeUndParents[i, 1]).transform;
@@ -615,6 +734,51 @@ public class TuerGenerator2 : MonoBehaviour
 
         GameObject.Find("OUT_Zarge").transform.position = position;
         GameObject.Find("OUT_Zarge").transform.rotation = Quaternion.Euler(rotation);
+
+    }
+
+
+    void toggleMaterial3()
+    {
+         Material[] yourMaterial = new Material[3];
+        //Material yourMaterial3;
+
+        Renderer r;
+
+        //Material yourMaterial = (Material)Resources.Load("04_Holz/04-1_pur/M_2K_CC0T_Wood003_2K", typeof(Material));
+        //Material yourMaterial = Resources.Load<Material>("Material/03-4_Struktur/M_2K_CC0T_MetalPlates006_2K-JPG");
+        // Load a text file (Assets/Resources/Material/04_Holz/04-1_pur/M_2K_CC0T_Wood003_2K)
+        if (aktuellesMaterial < (materialien3.GetLength(0) -1))
+        {
+            aktuellesMaterial += 1;
+        }
+        else
+        {
+            aktuellesMaterial = 0;
+        }
+
+        //Debug.Log("Array-Laenge: " + materialien.Length.ToString());
+        //Debug.Log("Array-Index:  " + aktuellesMaterial.ToString());
+        //Debug.Log("Material:     " + materialien[aktuellesMaterial]);
+        //Debug.Log("--------------------------------------------------------------------------------------");
+
+        yourMaterial[0] = Resources.Load<Material>(materialien3[aktuellesMaterial, 0]);
+        yourMaterial[1] = Resources.Load<Material>(materialien3[aktuellesMaterial, 1]);
+        yourMaterial[2] = Resources.Load<Material>(materialien3[aktuellesMaterial, 2]);
+       
+        Debug.Log(yourMaterial[0].name + " - " + yourMaterial[1].name + " - " + yourMaterial[2].name);
+
+        r = GameObject.Find("3D_Tuerblatt").GetComponent<MeshRenderer>();
+
+        r.materials = yourMaterial;
+
+
+        r = GameObject.Find("3D_Zarge").GetComponent<MeshRenderer>();
+        Material[] materialZarge = r.materials;
+        materialZarge[0] = yourMaterial[0];
+        materialZarge[1] = yourMaterial[0];
+        materialZarge[2] = yourMaterial[0];
+        r.materials = materialZarge;
 
     }
 

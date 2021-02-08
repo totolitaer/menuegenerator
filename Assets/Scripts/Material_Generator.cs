@@ -330,10 +330,10 @@ public class Material_Generator : MonoBehaviour
 
         if (!File.Exists("Assets\\Resources\\Material\\" + aktuellerPfadOhnePraefixUndOhneLastFolderName + "/" + materialName + ".mat") || vorhandeneUeberschreiben)
         {
-           AssetDatabase.CreateAsset(material, "Assets\\Resources\\Material\\" + aktuellerPfadOhnePraefixUndOhneLastFolderName + "\\" + materialName + ".mat");
+           //AssetDatabase.CreateAsset(material, "Assets\\Resources\\Material\\" + aktuellerPfadOhnePraefixUndOhneLastFolderName + "\\" + materialName + ".mat");
         }
 
-        AssetDatabase.SaveAssets();
+        //AssetDatabase.SaveAssets();
 
     }
 }

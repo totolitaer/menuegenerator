@@ -5,7 +5,7 @@ ScriptedImporter:
   externalObjects: {}
   serializedVersion: 2
   userData: 
-  assetBundleName: 
+  assetBundleName: raw grey concrete
   assetBundleVariant: 
   script: {fileID: 232528478, guid: 43a8bbf65be290d44ba52b94476242b9, type: 3}
   version: 29
@@ -30,7 +30,7 @@ ScriptedImporter:
       texEnvs:
       - name: _BaseMap
         texture: {fileID: 7372765392024184320, guid: 7ae6a5c10ce4b1f4b9e91fcc4c16a1ec, type: 3}
-        scale: {x: 30, y: 30}
+        scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _BumpMap
         texture: {fileID: 2884399254305758371, guid: 7ae6a5c10ce4b1f4b9e91fcc4c16a1ec, type: 3}
@@ -42,7 +42,7 @@ ScriptedImporter:
         offset: {x: 0, y: 0}
       - name: _MainTex
         texture: {instanceID: 0}
-        scale: {x: 30, y: 30}
+        scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _MetallicGlossMap
         texture: {fileID: 2427791837754722201, guid: 7ae6a5c10ce4b1f4b9e91fcc4c16a1ec, type: 3}
