@@ -41,7 +41,7 @@ public class GUI_Innentuer : MonoBehaviour
         public int PosY = VerschiebungY;
         public int Width = 960;
         public int Height = 1080;
-        public Color32 Color = new Color32(0, 0, 0, 100);
+        public Color32 Color = new Color32();
 
         // HauptmenueHeaderContainer
         public string HeaderContainerNameInCanvas = "HauptmenueHeaderContainer";
@@ -50,7 +50,7 @@ public class GUI_Innentuer : MonoBehaviour
         public int HeaderContainerPosY = VerschiebungY;
         public int HeaderContainerWidth = 960;
         public int HeaderContainerHeight = 120;
-        public Color32 HeaderContainerColor = new Color32(0, 0, 0, 250);
+        public Color32 HeaderContainerColor = new Color32();
 
         // HauptmenueHeaderLogo
         public string HeaderLogoNameInCanvas = "HauptmenueHeaderLogo";
@@ -59,7 +59,7 @@ public class GUI_Innentuer : MonoBehaviour
         public int HeaderLogoPosY = VerschiebungY - 20;
         public int HeaderLogoWidth = 80;
         public int HeaderLogoHeight = 80;
-        public Color32 HeaderLogoColor = new Color32(255, 255, 255, 255);
+        public Color32 HeaderLogoColor = new Color32();
         public string HeaderLogoSourceImage = "Logos/cog-wheel-silhouette_white";
 
         // HauptmenueHeaderText
@@ -68,9 +68,9 @@ public class GUI_Innentuer : MonoBehaviour
         public string HeaderTextText = "Hauptmenü";
         public int HeaderTextPosX = VerschiebungX + 150;
         public int HeaderTextPosY = VerschiebungY - 23;
-        public int HeaderTextWidth = 780;
+        public int HeaderTextWidth = 840;
         public int HeaderTextHeight = 120;
-        public Color32 HeaderTextColor = new Color32(255, 255, 255, 255);
+        public Color32 HeaderTextColor = new Color32();
         public string HeaderTextFontType = "Arial.ttf";
         public int HeaderTextFontSize = 70;
         public FontStyle HeaderTextFontStyle = FontStyle.Normal; // Normal, Bold, Italic, BoldAndItalic
@@ -82,17 +82,17 @@ public class GUI_Innentuer : MonoBehaviour
         public int InfoContainerPosY = VerschiebungY - 120;
         public int InfoContainerWidth = 960;
         public int InfoContainerHeight = 100;
-        public Color32 InfoContainerColor = new Color32(0, 0, 0, 230);
+        public Color32 InfoContainerColor = new Color32();
 
         // HauptmenueInfoText
         public string InfoTextNameInCanvas = "HauptmenueInfoText";
         public string InfoTextParent = "HauptmenueInfoContainer";
         public string InfoTextText = "generelle Einstellungen";
         public int InfoTextPosX = VerschiebungX + 20;
-        public int InfoTextPosY = VerschiebungY - 123;
-        public int InfoTextWidth = 780;
+        public int InfoTextPosY = VerschiebungY - 131;
+        public int InfoTextWidth = 840;
         public int InfoTextHeight = 120;
-        public Color32 InfoTextColor = new Color32(255, 255, 255, 50);
+        public Color32 InfoTextColor = new Color32();
         public string InfoTextFontType = "Arial.ttf";
         public int InfoTextFontSize = 35;
         public FontStyle InfoTextFontStyle = FontStyle.Normal; // Normal, Bold, Italic, BoldAndItalic
@@ -104,7 +104,7 @@ public class GUI_Innentuer : MonoBehaviour
         public int InfoLogoPosY = VerschiebungY - 120;
         public int InfoLogoWidth = 60;
         public int InfoLogoHeight = 100;
-        public Color32 InfoLogoColor = new Color32(0, 0, 0, 0); // ausgeblendet
+        public Color32 InfoLogoColor = new Color32(); // ausgeblendet
         public string InfoLogoSourceImage = "";//"Logos/list-with-dots_white";
 
         //HauptmenueHauptContainer
@@ -114,7 +114,7 @@ public class GUI_Innentuer : MonoBehaviour
         public int HauptContainerPosY = VerschiebungY - 220;
         public int HauptContainerWidth = 960;
         public int HauptContainerHeight = 920;
-        public Color32 HauptContainerColor = new Color32(0, 000, 0, 100);
+        public Color32 HauptContainerColor = new Color32();
 
         // ab hier die einzelnen Zeilen
 
@@ -126,7 +126,8 @@ public class GUI_Innentuer : MonoBehaviour
         public int ZeileContainerPosY = VerschiebungY - 230;
         public int ZeileContainerWidth = 960;
         public int ZeileContainerHeight = 100;
-        public Color32 ZeileContainerColor = new Color32(0, 000, 0, 100);
+        public Color32 ZeileContainerColor = new Color32();
+        public Color32 ZeileContainerColorToggle = new Color32(); // nur in Hauptmenü 
         // vertikaler Abstand zwischen den einzelnen Containern
         public int ZeileContainerAbstandY = -4;
 
@@ -138,7 +139,7 @@ public class GUI_Innentuer : MonoBehaviour
         public int ZeileHeaderPosY = VerschiebungY + -240;
         public int ZeileHeaderWidth = 600;
         public int ZeileHeaderHeight = 60;
-        public Color32 ZeileHeaderColor = new Color32(255, 255, 255, 255);
+        public Color32 ZeileHeaderColor = new Color32();
         public string ZeileHeaderFontType = "Arial.ttf";
         public int ZeileHeaderFontSize = 45;
         public FontStyle ZeileHeaderFontStyle = FontStyle.Normal; // Normal, Bold, Italic, BoldAndItalic
@@ -164,7 +165,7 @@ public class GUI_Innentuer : MonoBehaviour
         public int ZeileDetailPosY = VerschiebungY - 294;
         public int ZeileDetailWidth = 920;
         public int ZeileDetailHeight = 50;
-        public Color32 ZeileDetailColor = new Color32(255, 255, 200, 255);
+        public Color32 ZeileDetailColor = new Color32();
         public string ZeileDetailFontType = "Arial.ttf";
         public int ZeileDetailFontSize = 25;
         public FontStyle ZeileDetailFontStyle = FontStyle.Normal; // Normal, Bold, Italic, BoldAndItalic
@@ -176,7 +177,7 @@ public class GUI_Innentuer : MonoBehaviour
         public int ZeileLogoPosY = VerschiebungY - 230;
         public int ZeileLogoWidth = 60;
         public int ZeileLogoHeight = 100;
-        public Color32 ZeileLogoColor = new Color32(0, 0, 0, 150);
+        public Color32 ZeileLogoColor = new Color32();
         public string ZeileLogoSourceImage = "";//"Logos/list-with-dots_white";
 
         // HauptmenueZeilenNummer
@@ -187,7 +188,7 @@ public class GUI_Innentuer : MonoBehaviour
         public int ZeileNummerPosY = VerschiebungY - 238;
         public int ZeileNummerWidth = 60;
         public int ZeileNummerHeight = 100;
-        public Color32 ZeileNummerColor = new Color32(255, 255, 255, 255);
+        public Color32 ZeileNummerColor = new Color32();
         public string ZeileNummerFontType = "Arial.ttf";
         public int ZeileNummerFontSize = 70;
         public FontStyle ZeileNummerFontStyle = FontStyle.Normal; // Normal, Bold, Italic, BoldAndItalic
@@ -208,7 +209,7 @@ public class GUI_Innentuer : MonoBehaviour
         public int PosY = VerschiebungY;
         public int Width = 960;
         public int Height = 1080;
-        public Color32 Color = new Color32(0, 0, 0, 100);
+        public Color32 Color = new Color32();
 
         // InnentuerHeaderContainer
         public string HeaderContainerNameInCanvas = "InnentuerHeaderContainer";
@@ -217,7 +218,7 @@ public class GUI_Innentuer : MonoBehaviour
         public int HeaderContainerPosY = VerschiebungY;
         public int HeaderContainerWidth = 960;
         public int HeaderContainerHeight = 120;
-        public Color32 HeaderContainerColor = new Color32(0, 0, 0, 250);
+        public Color32 HeaderContainerColor = new Color32();
 
         // InnentuerHeaderLogo
         public string HeaderLogoNameInCanvas = "InnentuerHeaderLogo";
@@ -226,7 +227,7 @@ public class GUI_Innentuer : MonoBehaviour
         public int HeaderLogoPosY = VerschiebungY - 20;
         public int HeaderLogoWidth = 80;
         public int HeaderLogoHeight = 80;
-        public Color32 HeaderLogoColor = new Color32(255, 255, 255, 255);
+        public Color32 HeaderLogoColor = new Color32();
         public string HeaderLogoSourceImage = "Logos/numbered-list_white";
 
         // InnentuerHeaderText
@@ -235,9 +236,9 @@ public class GUI_Innentuer : MonoBehaviour
         public string HeaderTextText = "Innentür";
         public int HeaderTextPosX = VerschiebungX + 150;
         public int HeaderTextPosY = VerschiebungY - 23;
-        public int HeaderTextWidth = 780;
+        public int HeaderTextWidth = 840;
         public int HeaderTextHeight = 120;
-        public Color32 HeaderTextColor = new Color32(255, 255, 255, 255);
+        public Color32 HeaderTextColor = new Color32();
         public string HeaderTextFontType = "Arial.ttf";
         public int HeaderTextFontSize = 70;
         public FontStyle HeaderTextFontStyle = FontStyle.Normal; // Normal, Bold, Italic, BoldAndItalic
@@ -249,17 +250,17 @@ public class GUI_Innentuer : MonoBehaviour
         public int InfoContainerPosY = VerschiebungY - 120;
         public int InfoContainerWidth = 960;
         public int InfoContainerHeight = 100;
-        public Color32 InfoContainerColor = new Color32(0, 0, 0, 230);
+        public Color32 InfoContainerColor = new Color32();
 
         // InnentuerInfoText
         public string InfoTextNameInCanvas = "InnentuerInfoText";
         public string InfoTextParent = "InnentuerInfoContainer";
         public string InfoTextText = "wählen Sie bitte Voreinstellungen";
         public int InfoTextPosX = VerschiebungX + 20;
-        public int InfoTextPosY = VerschiebungY - 123;
-        public int InfoTextWidth = 780;
+        public int InfoTextPosY = VerschiebungY - 131;
+        public int InfoTextWidth = 840;
         public int InfoTextHeight = 120;
-        public Color32 InfoTextColor = new Color32(255, 255, 255, 50);
+        public Color32 InfoTextColor = new Color32();
         public string InfoTextFontType = "Arial.ttf";
         public int InfoTextFontSize = 35;
         public FontStyle InfoTextFontStyle = FontStyle.Normal; // Normal, Bold, Italic, BoldAndItalic
@@ -271,7 +272,7 @@ public class GUI_Innentuer : MonoBehaviour
         public int InfoLogoPosY = VerschiebungY - 120;
         public int InfoLogoWidth = 60;
         public int InfoLogoHeight = 100;
-        public Color32 InfoLogoColor = new Color32(0, 0, 0, 0); //ausgeblendet
+        public Color32 InfoLogoColor = new Color32(); //ausgeblendet
         public string InfoLogoSourceImage = "";//"Logos/list-with-dots_white";
 
         //InnentuerHauptContainer
@@ -281,7 +282,7 @@ public class GUI_Innentuer : MonoBehaviour
         public int HauptContainerPosY = VerschiebungY - 220;
         public int HauptContainerWidth = 960;
         public int HauptContainerHeight = 920;
-        public Color32 HauptContainerColor = new Color32(0, 000, 0, 100);
+        public Color32 HauptContainerColor = new Color32();
 
         // ab hier die einzelnen Zeilen
 
@@ -293,7 +294,7 @@ public class GUI_Innentuer : MonoBehaviour
         public int ZeileContainerPosY = VerschiebungY - 230;
         public int ZeileContainerWidth = 960;
         public int ZeileContainerHeight = 100;
-        public Color32 ZeileContainerColor = new Color32(0, 000, 0, 100);
+        public Color32 ZeileContainerColor = new Color32();
         // vertikaler Abstand zwischen den einzelnen Containern
         public int ZeileContainerAbstandY = -4;
 
@@ -305,7 +306,7 @@ public class GUI_Innentuer : MonoBehaviour
         public int ZeileHeaderPosY = VerschiebungY + -240;
         public int ZeileHeaderWidth = 600;
         public int ZeileHeaderHeight = 60;
-        public Color32 ZeileHeaderColor = new Color32(255, 255, 255, 255);
+        public Color32 ZeileHeaderColor = new Color32();
         public string ZeileHeaderFontType = "Arial.ttf";
         public int ZeileHeaderFontSize = 45;
         public FontStyle ZeileHeaderFontStyle = FontStyle.Normal; // Normal, Bold, Italic, BoldAndItalic
@@ -331,7 +332,7 @@ public class GUI_Innentuer : MonoBehaviour
         public int ZeileDetailPosY = VerschiebungY - 294;
         public int ZeileDetailWidth = 920;
         public int ZeileDetailHeight = 50;
-        public Color32 ZeileDetailColor = new Color32(255, 255, 200, 255);
+        public Color32 ZeileDetailColor = new Color32();
         public string ZeileDetailFontType = "Arial.ttf";
         public int ZeileDetailFontSize = 25;
         public FontStyle ZeileDetailFontStyle = FontStyle.Normal; // Normal, Bold, Italic, BoldAndItalic
@@ -343,7 +344,7 @@ public class GUI_Innentuer : MonoBehaviour
         public int ZeileLogoPosY = VerschiebungY - 230;
         public int ZeileLogoWidth = 60;
         public int ZeileLogoHeight = 100;
-        public Color32 ZeileLogoColor = new Color32(0, 0, 0, 150);
+        public Color32 ZeileLogoColor = new Color32();
         public string ZeileLogoSourceImage = "";//"Logos/list-with-dots_white";
 
         // InnentuerZeilenNummer
@@ -354,7 +355,7 @@ public class GUI_Innentuer : MonoBehaviour
         public int ZeileNummerPosY = VerschiebungY - 238;
         public int ZeileNummerWidth = 60;
         public int ZeileNummerHeight = 100;
-        public Color32 ZeileNummerColor = new Color32(255, 255, 255, 255);
+        public Color32 ZeileNummerColor = new Color32();
         public string ZeileNummerFontType = "Arial.ttf";
         public int ZeileNummerFontSize = 70;
         public FontStyle ZeileNummerFontStyle = FontStyle.Normal; // Normal, Bold, Italic, BoldAndItalic
@@ -376,8 +377,7 @@ public class GUI_Innentuer : MonoBehaviour
         public int PosY = VerschiebungY;
         public int Width = 960;
         public int Height = 1080;
-        public Color32 Color = new Color32(0, 0, 0, 100);
-        public Color32 ColorPressed = new Color32(135, 8, 11, 200);
+        public Color32 Color = new Color32();
 
         // KonfiguratorHeaderContainer
         public string HeaderContainerNameInCanvas = "KonfiguratorHeaderContainer";
@@ -386,7 +386,7 @@ public class GUI_Innentuer : MonoBehaviour
         public int HeaderContainerPosY = VerschiebungY;
         public int HeaderContainerWidth = 960;
         public int HeaderContainerHeight = 120;
-        public Color32 HeaderContainerColor = new Color32(0, 0, 0, 250);
+        public Color32 HeaderContainerColor = new Color32();
 
         // KonfiguratorHeaderLogo
         public string HeaderLogoNameInCanvas = "KonfiguratorHeaderLogo";
@@ -395,7 +395,7 @@ public class GUI_Innentuer : MonoBehaviour
         public int HeaderLogoPosY = VerschiebungY - 20;
         public int HeaderLogoWidth = 80;
         public int HeaderLogoHeight = 80;
-        public Color32 HeaderLogoColor = new Color32(255, 255, 255, 255);
+        public Color32 HeaderLogoColor = new Color32();
         public string HeaderLogoSourceImage = "Logos/list-with-dots_white";
 
         // KonfiguratorHeaderText
@@ -404,9 +404,9 @@ public class GUI_Innentuer : MonoBehaviour
         public string HeaderTextText = "Konfigurator";
         public int HeaderTextPosX = VerschiebungX + 150;
         public int HeaderTextPosY = VerschiebungY - 23;
-        public int HeaderTextWidth = 780;
+        public int HeaderTextWidth = 840;
         public int HeaderTextHeight = 120;
-        public Color32 HeaderTextColor = new Color32(255, 255, 255, 255);
+        public Color32 HeaderTextColor = new Color32();
         public string HeaderTextFontType = "Arial.ttf";
         public int HeaderTextFontSize = 70;
         public FontStyle HeaderTextFontStyle = FontStyle.Normal; // Normal, Bold, Italic, BoldAndItalic
@@ -418,17 +418,17 @@ public class GUI_Innentuer : MonoBehaviour
         public int InfoContainerPosY = VerschiebungY - 120;
         public int InfoContainerWidth = 960;
         public int InfoContainerHeight = 100;
-        public Color32 InfoContainerColor = new Color32(0, 0, 0, 230);
+        public Color32 InfoContainerColor = new Color32();
 
         // KonfiguratorInfoText
         public string InfoTextNameInCanvas = "KonfiguratorInfoText";
         public string InfoTextParent = "KonfiguratorInfoContainer";
         public string InfoTextText = "Innentür";
         public int InfoTextPosX = VerschiebungX + 20;
-        public int InfoTextPosY = VerschiebungY - 123;
-        public int InfoTextWidth = 780;
+        public int InfoTextPosY = VerschiebungY - 131;
+        public int InfoTextWidth = 840;
         public int InfoTextHeight = 120;
-        public Color32 InfoTextColor = new Color32(255, 255, 255, 255);
+        public Color32 InfoTextColor = new Color32();
         public string InfoTextFontType = "Arial.ttf";
         public int InfoTextFontSize = 35;
         public FontStyle InfoTextFontStyle = FontStyle.Normal; // Normal, Bold, Italic, BoldAndItalic
@@ -440,7 +440,7 @@ public class GUI_Innentuer : MonoBehaviour
         public int InfoLogoPosY = VerschiebungY - 120;
         public int InfoLogoWidth = 60;
         public int InfoLogoHeight = 100;
-        public Color32 InfoLogoColor = new Color32(0, 0, 0, 150);
+        public Color32 InfoLogoColor = new Color32();
         public string InfoLogoSourceImage = "";//"Logos/list-with-dots_white";
 
         // KonfiguratorInfoNummer
@@ -451,7 +451,7 @@ public class GUI_Innentuer : MonoBehaviour
         public int InfoNummerPosY = VerschiebungY - 132;
         public int InfoNummerWidth = 60;
         public int InfoNummerHeight = 100;
-        public Color32 InfoNummerColor = new Color32(255, 255, 255, 255);
+        public Color32 InfoNummerColor = new Color32();
         public string InfoNummerFontType = "Arial.ttf";
         public int InfoNummerFontSize = 70;
         public FontStyle InfoNummerFontStyle = FontStyle.Normal; // Normal, Bold, Italic, BoldAndItalic
@@ -463,7 +463,7 @@ public class GUI_Innentuer : MonoBehaviour
         public int HauptContainerPosY = VerschiebungY - 220;
         public int HauptContainerWidth = 960;
         public int HauptContainerHeight = 920;
-        public Color32 HauptContainerColor = new Color32(0, 000, 0, 100);
+        public Color32 HauptContainerColor = new Color32();
 
         // ab hier die einzelnen Zeilen
 
@@ -475,7 +475,7 @@ public class GUI_Innentuer : MonoBehaviour
         public int ZeileContainerPosY = VerschiebungY - 230;
         public int ZeileContainerWidth = 960;
         public int ZeileContainerHeight = 100;
-        public Color32 ZeileContainerColor = new Color32(0, 000, 0, 100);
+        public Color32 ZeileContainerColor = new Color32();
         // vertikaler Abstand zwischen den einzelnen Containern
         public int ZeileContainerAbstandY = -4;
 
@@ -487,7 +487,7 @@ public class GUI_Innentuer : MonoBehaviour
         public int ZeileHeaderPosY = VerschiebungY + -240;
         public int ZeileHeaderWidth = 600;
         public int ZeileHeaderHeight = 40;
-        public Color32 ZeileHeaderColor = new Color32(255, 255, 255, 255);
+        public Color32 ZeileHeaderColor = new Color32();
         public string ZeileHeaderFontType = "Arial.ttf";
         public int ZeileHeaderFontSize = 30;
         public FontStyle ZeileHeaderFontStyle = FontStyle.Normal; // Normal, Bold, Italic, BoldAndItalic
@@ -503,7 +503,7 @@ public class GUI_Innentuer : MonoBehaviour
         public int ZeileMaterialPosY = VerschiebungY - 241;
         public int ZeileMaterialWidth = 20;
         public int ZeileMaterialHeight = 20;
-        public Color32 ZeileMaterialColor = new Color32(255, 255, 255, 255);
+        public Color32 ZeileMaterialColor = new Color32();
 
         //KonfiguratorZeileDetail
         public string ZeileDetailNameInCanvas = "KonfiguratorZeileDetail";
@@ -513,7 +513,7 @@ public class GUI_Innentuer : MonoBehaviour
         public int ZeileDetailPosY = VerschiebungY - 274;
         public int ZeileDetailWidth = 920;
         public int ZeileDetailHeight = 50;
-        public Color32 ZeileDetailColor = new Color32(255, 255, 200, 255);
+        public Color32 ZeileDetailColor = new Color32();
         public string ZeileDetailFontType = "Arial.ttf";
         public int ZeileDetailFontSize = 20;
         public FontStyle ZeileDetailFontStyle = FontStyle.Normal; // Normal, Bold, Italic, BoldAndItalic
@@ -525,7 +525,7 @@ public class GUI_Innentuer : MonoBehaviour
         public int ZeileLogoPosY = VerschiebungY - 230;
         public int ZeileLogoWidth = 60;
         public int ZeileLogoHeight = 100;
-        public Color32 ZeileLogoColor = new Color32(0, 0, 0, 150);
+        public Color32 ZeileLogoColor = new Color32();
         public string ZeileLogoSourceImage = "";//"Logos/list-with-dots_white";
 
         // KonfiguratorZeilenNummer
@@ -536,7 +536,7 @@ public class GUI_Innentuer : MonoBehaviour
         public int ZeileNummerPosY = VerschiebungY - 238;
         public int ZeileNummerWidth = 60;
         public int ZeileNummerHeight = 100;
-        public Color32 ZeileNummerColor = new Color32(255, 255, 255, 255);
+        public Color32 ZeileNummerColor = new Color32();
         public string ZeileNummerFontType = "Arial.ttf";
         public int ZeileNummerFontSize = 70;
         public FontStyle ZeileNummerFontStyle = FontStyle.Normal; // Normal, Bold, Italic, BoldAndItalic
@@ -580,6 +580,7 @@ public class GUI_Innentuer : MonoBehaviour
         public string BreiteDIN { get; set; }
         public string Wandstaerke { get; set; }
         public string Bekleidungsbreite { get; set; }
+        public string Kantenrundung { get; set; }
         public string Oeffnungsrichtung { get; set; }
         public string Frontseite { get; set; }
     }
@@ -646,7 +647,6 @@ public class GUI_Innentuer : MonoBehaviour
         public string[] Mat5 { get; set; }
     }
 
-
     public class MaterialKombination
     {
         public string Material1 { get; set; } // Hauptmaterial
@@ -700,6 +700,7 @@ public class GUI_Innentuer : MonoBehaviour
     public MaterialKombination aktuelleMaterialKombinationSchlosskasten = new MaterialKombination();
     public MaterialKombination aktuelleMaterialKombinationSchwelle = new MaterialKombination();
 
+
     // ---------------------------------------------------------------------------------------------------
     // Variablen
     // ---------------------------------------------------------------------------------------------------
@@ -714,6 +715,7 @@ public class GUI_Innentuer : MonoBehaviour
     // Hilfsvariable: Solange true (= Lerp-Vorgang des vorherigen Tastatemdrucks ist noch nocht abgeschlossen),
     // werden alle Tastatureingaben blockiert
     public bool colorLerpAktive = false;
+
 
     // Datenbank
     // lokale Listen (1:1 Abbilder der der remote Tabellen)
@@ -739,9 +741,266 @@ public class GUI_Innentuer : MonoBehaviour
     List<T_Innentuer> ergebnisInnentuerNachCheckBreite = new List<T_Innentuer>();
     List<T_Innentuer> ergebnisInnentuerNachCheckWandstaerke = new List<T_Innentuer>();
     List<T_Innentuer> ergebnisInnentuerNachCheckBekleidungsbreite = new List<T_Innentuer>();
+    List<T_Innentuer> ergebnisInnentuerNachCheckKantenrundung = new List<T_Innentuer>();
+
+    // wird für Logik der Achsenspiegelung benötigt
+    public float rotationWinkel = -90.0f;
 
 
 
+    // ---------------------------------------------------------------------------------------------------
+    // Datenbank-Abfragen
+    // ---------------------------------------------------------------------------------------------------
+
+    List<T_Band> dBAbfrageBand()
+    {
+        RestClientManager restClient = new RestClientManager();
+        string query = "SELECT * FROM Thomas2.Band";
+        //Debug.Log(query);
+        List<T_Band> queryResult = restClient.GetExecuteResultsBand(query);
+        return queryResult;
+    }
+
+    List<T_Bandaufnahme> dBAbfrageBandaufnahme()
+    {
+        RestClientManager restClient = new RestClientManager();
+        string query = "SELECT * FROM Thomas2.Bandaufnahme";
+        //Debug.Log(query);
+        List<T_Bandaufnahme> queryResult = restClient.GetExecuteResultsBandaufnahme(query);
+        return queryResult;
+    }
+
+    List<T_Druecker> dBAbfrageDruecker()
+    {
+        RestClientManager restClient = new RestClientManager();
+        string query = "SELECT * FROM Thomas2.Druecker";
+        //Debug.Log(query);
+        List<T_Druecker> queryResult = restClient.GetExecuteResultsDruecker(query);
+        return queryResult;
+    }
+
+    List<T_Schliessblech> dBAbfrageSchliessblech()
+    {
+        RestClientManager restClient = new RestClientManager();
+        string query = "SELECT * FROM Thomas2.Schliessblech";
+        //Debug.Log(query);
+        List<T_Schliessblech> queryResult = restClient.GetExecuteResultsSchliessblech(query);
+        return queryResult;
+    }
+
+    List<T_Schlosskasten> dBAbfrageSchlosskasten()
+    {
+        RestClientManager restClient = new RestClientManager();
+        string query = "SELECT * FROM Thomas2.Schlosskasten";
+        //Debug.Log(query);
+        List<T_Schlosskasten> queryResult = restClient.GetExecuteResultsSchlosskasten(query);
+        return queryResult;
+    }
+
+    List<T_Schwelle> dBAbfrageSchwelle()
+    {
+        RestClientManager restClient = new RestClientManager();
+        string query = "SELECT * FROM Thomas2.Schwelle";
+        //Debug.Log(query);
+        List<T_Schwelle> queryResult = restClient.GetExecuteResultsSchwelle(query);
+        return queryResult;
+    }
+
+    List<T_Tuerblatt> dBAbfrageTuerblatt()
+    {
+        RestClientManager restClient = new RestClientManager();
+        string query = "SELECT * FROM Thomas2.Tuerblatt";
+        //Debug.Log(query);
+        List<T_Tuerblatt> queryResult = restClient.GetExecuteResultsTuerblatt(query);
+        return queryResult;
+    }
+
+    List<T_Zarge> dBAbfrageZarge()
+    {
+        RestClientManager restClient = new RestClientManager();
+        string query = "SELECT * FROM Thomas2.Zarge";
+        //Debug.Log(query);
+        List<T_Zarge> queryResult = restClient.GetExecuteResultsZarge(query);
+        return queryResult;
+    }
+
+    List<T_Innentuer> dBAbfrageInnentuer()
+    {
+        RestClientManager restClient = new RestClientManager();
+        string query = "SELECT * FROM Thomas2.Innentuer";
+        //Debug.Log(query);
+        List<T_Innentuer> queryResult = restClient.GetExecuteResultsInnentuer(query);
+        return queryResult;
+    }
+
+    List<T_Objektteil> dBAbfrageObjektteil()
+    {
+        RestClientManager restClient = new RestClientManager();
+        string query = "SELECT * FROM Thomas2.Objektteil";
+        //Debug.Log(query);
+        List<T_Objektteil> queryResult = restClient.GetExecuteResultsObjektteil(query);
+        return queryResult;
+    }
+
+    List<T_Hersteller> dBAbfrageHersteller()
+    {
+        RestClientManager restClient = new RestClientManager();
+        string query = "SELECT * FROM Thomas2.Hersteller";
+        //Debug.Log(query);
+        List<T_Hersteller> queryResult = restClient.GetExecuteResultsHersteller(query);
+        return queryResult;
+    }
+
+    List<T_MAT> dBAbfrageMAT()
+    {
+        RestClientManager restClient = new RestClientManager();
+        string query = "SELECT * FROM Thomas2.MAT";
+        //Debug.Log(query);
+        List<T_MAT> queryResult = restClient.GetExecuteResultsMAT(query);
+        return queryResult;
+    }
+
+    List<T_Innentuer> ermitteleAlleTrefferAusTabelleInnentuerMitAuswahlkriterien()
+    {
+
+        // gehe alle Zeilen der Tabelle Innentuer durch ..
+        ergebnisInnentuer.Clear();
+        ergebnisInnentuerNachCheckHoehe.Clear();
+        ergebnisInnentuerNachCheckBreite.Clear();
+        ergebnisInnentuerNachCheckWandstaerke.Clear();
+        ergebnisInnentuerNachCheckBekleidungsbreite.Clear();
+        ergebnisInnentuerNachCheckKantenrundung.Clear();
+
+        //Debug.Log("-----------ergebnisInnentuer.Count() START : " + ergebnisInnentuer.Count().ToString());
+
+
+        foreach (T_Innentuer zeileInnentuer in tabelleInnentuer)
+        {
+            // .. und ermittele aus der entsprechenden Spalte die Zargen-ID
+            // gehe alle Zeilen der Tabelle Zargen durch ..
+
+            foreach (T_Zarge zeileZarge in tabelleZarge)
+            {
+                // .. und prüfe nur in den Zeilen mit der relevanten Zargen-ID, ..
+                if (zeileZarge.Id == zeileInnentuer.Zarge)
+                {
+                    //Debug.Log("-----------innentuerOutputParameter.HoeheDIN) : " + innentuerOutputParameter.HoeheDIN);
+                    // ob die Höhe der Zargen-Id der momentan eingestelletn Höhe ist
+                    if ((zeileZarge.HoeheDIN.ToString() == innentuerOutputParameter.HoeheDIN) || (innentuerOutputParameter.HoeheDIN == "%"))
+                    {
+                        ergebnisInnentuerNachCheckHoehe.Add(zeileInnentuer);
+                    }
+                }
+            }
+        }
+        Debug.Log("-----------ergebnisInnentuerNachCheckHoehe.Count() nach Hoehe : " + ergebnisInnentuerNachCheckHoehe.Count().ToString());
+        Debug.Log("-----------ergebnisInnentuer.Count() nach Hoehe : " + ergebnisInnentuer.Count().ToString());
+        ergebnisInnentuer = ergebnisInnentuerNachCheckHoehe;
+
+        // wenn es mindesten einen Treffer nach Check Hoehe gab, mache weiter
+        if (ergebnisInnentuerNachCheckHoehe.Count() > 0)
+        {
+            foreach (T_Innentuer zeileInnentuerNachCheckHoehe in ergebnisInnentuerNachCheckHoehe)
+            {
+                foreach (T_Zarge zeileZarge in tabelleZarge)
+                {
+                    if (zeileZarge.Id == zeileInnentuerNachCheckHoehe.Zarge)
+                    {
+                        //Debug.Log("-----------innentuerOutputParameter.BreiteDIN) : " + innentuerOutputParameter.BreiteDIN);
+                        if ((zeileZarge.BreiteDIN.ToString() == innentuerOutputParameter.BreiteDIN) || (innentuerOutputParameter.BreiteDIN == "%"))
+                        {
+                            ergebnisInnentuerNachCheckBreite.Add(zeileInnentuerNachCheckHoehe);
+                        }
+                    }
+                }
+            }
+            ergebnisInnentuer = ergebnisInnentuerNachCheckBreite;
+            Debug.Log("-----------ergebnisInnentuerNachCheckBreite.Count() nach Breite : " + ergebnisInnentuerNachCheckBreite.Count().ToString());
+            Debug.Log("-----------ergebnisInnentuer.Count() nach Breite : " + ergebnisInnentuer.Count().ToString());
+
+            // wenn es mindesten einen Treffer nach Check Breite gab, mache weiter
+            if (ergebnisInnentuerNachCheckBreite.Count() > 0)
+            {
+                foreach (T_Innentuer zeileInnentuerNachCheckBreite in ergebnisInnentuerNachCheckBreite)
+                {
+                    foreach (T_Zarge zeileZarge in tabelleZarge)
+                    {
+                        if (zeileZarge.Id == zeileInnentuerNachCheckBreite.Zarge)
+                        {
+                            //Debug.Log("-----------innentuerOutputParameter.Wandstärke) : " + innentuerOutputParameter.Wandstaerke);
+                            if ((zeileZarge.Wandstaerke.ToString() == innentuerOutputParameter.Wandstaerke) || (innentuerOutputParameter.Wandstaerke == "%"))
+                            {
+                                ergebnisInnentuerNachCheckWandstaerke.Add(zeileInnentuerNachCheckBreite);
+                            }
+                        }
+                    }
+                }
+                ergebnisInnentuer = ergebnisInnentuerNachCheckWandstaerke;
+                Debug.Log("-----------ergebnisInnentuerNachCheckWandstaerke.Count() nachWandstaerke : " + ergebnisInnentuerNachCheckWandstaerke.Count().ToString());
+                Debug.Log("-----------ergebnisInnentuer.Count() nach Wandstaerke : " + ergebnisInnentuer.Count().ToString());
+
+                // wenn es mindesten einen Treffer nach Check Wandstaerke gab, mache weiter
+                if (ergebnisInnentuerNachCheckWandstaerke.Count() > 0)
+                {
+                    foreach (T_Innentuer zeileInnentuerNachCheckWandstaerke in ergebnisInnentuerNachCheckWandstaerke)
+                    {
+                        foreach (T_Zarge zeileZarge in tabelleZarge)
+                        {
+                            if (zeileZarge.Id == zeileInnentuerNachCheckWandstaerke.Zarge)
+                            {
+                                //Debug.Log("-----------innentuerOutputParameter.Bekleidungsbreite) : " + innentuerOutputParameter.Bekleidungsbreite);
+                                if ((zeileZarge.Bekleidungsbreite.ToString() == innentuerOutputParameter.Bekleidungsbreite) || (innentuerOutputParameter.Bekleidungsbreite == "%"))
+                                {
+                                    ergebnisInnentuerNachCheckBekleidungsbreite.Add(zeileInnentuerNachCheckWandstaerke);
+                                }
+                            }
+                        }
+                    }
+                    ergebnisInnentuer = ergebnisInnentuerNachCheckBekleidungsbreite;
+                    Debug.Log("-----------ergebnisInnentuerNachCheckBekleidungsbreite.Count() nach Bekleidungsbreite : " + ergebnisInnentuerNachCheckBekleidungsbreite.Count().ToString());
+                    Debug.Log("-----------ergebnisInnentuer.Count() nach Bekleidungsbreite : " + ergebnisInnentuer.Count().ToString());
+
+
+                    // wenn es mindesten einen Treffer nach Check Bekleidungsbreite gab, mache weiter
+                    if (ergebnisInnentuerNachCheckBekleidungsbreite.Count() > 0)
+                    {
+                        foreach (T_Innentuer zeileInnentuerNachCheckBekleidungsbreite in ergebnisInnentuerNachCheckBekleidungsbreite)
+                        {
+                            foreach (T_Tuerblatt zeileTuerblatt in tabelleTuerblatt)
+                            {
+                                if (zeileTuerblatt.Id == zeileInnentuerNachCheckBekleidungsbreite.Tuerblatt)
+                                {
+                                    Debug.Log("-----------innentuerOutputParameter.Kantenrundung) : " + innentuerOutputParameter.Kantenrundung);
+                                    if ((zeileTuerblatt.Kantenrundung.ToString() == innentuerOutputParameter.Kantenrundung) || (innentuerOutputParameter.Kantenrundung == "%"))
+                                    {
+                                        ergebnisInnentuerNachCheckKantenrundung.Add(zeileInnentuerNachCheckBekleidungsbreite);
+                                    }
+                                }
+                            }
+                        }
+                        ergebnisInnentuer = ergebnisInnentuerNachCheckKantenrundung;
+                        Debug.Log("-----------ergebnisInnentuerNachCheckKantenrundung.Count() nach Bekleidungsbreite : " + ergebnisInnentuerNachCheckKantenrundung.Count().ToString());
+                        Debug.Log("-----------ergebnisInnentuer.Count() nach Bekleidungsbreite : " + ergebnisInnentuer.Count().ToString());
+                    }
+
+                }
+                else
+                {
+                    ergebnisInnentuer.Clear();
+                }
+            }
+            else
+            {
+                ergebnisInnentuer.Clear();
+            }
+        }
+        else
+        {
+            ergebnisInnentuer.Clear();
+        }
+
+        return ergebnisInnentuer;
+    }
 
 
 
@@ -808,23 +1067,30 @@ public class GUI_Innentuer : MonoBehaviour
         innentuerParameter.Menuepunkt.Add("Breite");
         innentuerParameter.Menuepunkt.Add("Wandstärke");
         innentuerParameter.Menuepunkt.Add("Bekleidungsbreite");
+        innentuerParameter.Menuepunkt.Add("Kantenrundung");
         innentuerParameter.Menuepunkt.Add("Öffnungsrichtung");
         innentuerParameter.Menuepunkt.Add("Frontseite");
 
         innentuerParameter.Toggle = new string[][] {
-            new string[] { "alle", "1875 mm (DIN) | 1885 mm (WÖM) | 1860 mm (TAM)", "2010 mm (DIN) | 2010 mm (WÖM) | 1985 mm (TAM)", "2125 mm (DIN) | 2135 mm (WÖM) | 2110 mm (TAM)", "2250 mm (DIN) | 2260 mm (WÖM) | 2235 mm (TAM)" },
-            new string[] { "alle", "625 mm (DIN) | 635 mm (WÖM) | 610 mm (TAM)", "750 mm (DIN) | 760 mm (WÖM) | 735 mm (TAM)", "875 mm (DIN) | 885 mm (WÖM) | 860 mm (TAM)", "1000 mm (DIN) | 1010 mm (WÖM) | 985 mm (TAM)", "1125 mm (DIN) | 1135 mm (WÖM) | 1110 mm (TAM)" },
+            //new string[] { "alle", "1875 mm (DIN) | 1885 mm (WÖM) | 1860 mm (TAM)", "2000 mm (DIN) | 2010 mm (WÖM) | 1985 mm (TAM)", "2125 mm (DIN) | 2135 mm (WÖM) | 2110 mm (TAM)", "2250 mm (DIN) | 2260 mm (WÖM) | 2235 mm (TAM)" },
+            new string[] { "alle", "2000 mm (DIN) | 2010 mm (WÖM) | 1985 mm (TAM)", "2125 mm (DIN) | 2135 mm (WÖM) | 2110 mm (TAM)" },
+            //new string[] { "alle", "625 mm (DIN) | 635 mm (WÖM) | 610 mm (TAM)", "750 mm (DIN) | 760 mm (WÖM) | 735 mm (TAM)", "875 mm (DIN) | 885 mm (WÖM) | 860 mm (TAM)", "1000 mm (DIN) | 1010 mm (WÖM) | 985 mm (TAM)", "1125 mm (DIN) | 1135 mm (WÖM) | 1110 mm (TAM)" },
+            new string[] { "alle", "750 mm (DIN) | 760 mm (WÖM) | 735 mm (TAM)", "875 mm (DIN) | 885 mm (WÖM) | 860 mm (TAM)", "1000 mm (DIN) | 1010 mm (WÖM) | 985 mm (TAM)" },
             new string[] { "alle", "115 mm", "180 mm", "200 mm", "265 mm", "300 mm"  },
             new string[] { "alle", "50 mm" },
+            new string[] { "alle", "keine", "8 mm" },
             new string[] { "DIN links", "DIN rechts" },
             new string[] { "Falzfront", "Zierfront" }
         };
 
         innentuerParameter.ToggleAktion = new string[][] {
-            new string[] { "%", "1875", "2000", "2125", "2250" },
-            new string[] { "%", "625", "750", "875", "1000", "1125" },
+            //new string[] { "%", "1875", "2000", "2125", "2250" },
+            new string[] { "%", "2000", "2125" },
+            //new string[] { "%", "625", "750", "875", "1000", "1125" },
+            new string[] { "%", "750", "875", "1000" },
             new string[] { "%", "115", "180", "200", "265", "300"  },
             new string[] { "%", "50" },
+            new string[] { "%", "0", "8" },
             new string[] { "DIN links", "DIN rechts" },
             new string[] { "Falzfront", "Zierfront" }
         };
@@ -878,11 +1144,14 @@ public class GUI_Innentuer : MonoBehaviour
 
         aktuelleGetoggelteInnentuer.Index = 0;
 
+        setzeFarbschema (hauptmenueOutputParameter.Farbeschema);
+
         innentuerOutputParameter.HoeheDIN = "%";
         innentuerOutputParameter.BreiteDIN = "%";
         innentuerOutputParameter.Oeffnungsrichtung = "%";
         innentuerOutputParameter.Wandstaerke = "%";
         innentuerOutputParameter.Bekleidungsbreite = "%";
+        innentuerOutputParameter.Kantenrundung = "%";
 
 
         ergebnisInnentuer = ermitteleAlleTrefferAusTabelleInnentuerMitAuswahlkriterien();
@@ -898,6 +1167,9 @@ public class GUI_Innentuer : MonoBehaviour
 
         aktuelleGetoggelteInnentuer.Schwelle = "";
         aktuelleGetoggelteMaterial.Schwelle = "";
+
+        setzeFarbschema("dunkel");
+
 
     }
 
@@ -1007,6 +1279,163 @@ public class GUI_Innentuer : MonoBehaviour
     }
 
 
+    void setzeFarbschema (string schema)
+    {
+        Debug.Log("Setze Farbschema = " + schema);
+
+
+        switch (schema)
+        {
+            case "dunkel":
+
+                guiHauptmenue.ZeileContainerColorToggle = new Color32(0, 0, 0, 255);
+
+                // Hauptmenue
+                GameObject.Find("Hauptmenue").GetComponent<Image>().color = new Color32(0, 0, 0, 100);
+                GameObject.Find("HauptmenueHeaderContainer").GetComponent<Image>().color = new Color32(0, 0, 0, 250);
+                GameObject.Find("HauptmenueHeaderLogo").GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+                GameObject.Find("HauptmenueHeaderText").GetComponent<Text>().color = new Color32(255, 255, 255, 255);
+                GameObject.Find("HauptmenueInfoContainer").GetComponent<Image>().color = new Color32(0, 0, 0, 230);
+                GameObject.Find("HauptmenueInfoLogo").GetComponent<Image>().color = new Color32(0, 0, 0, 0); // ausgeblendet
+                GameObject.Find("HauptmenueInfoText").GetComponent<Text>().color = new Color32(255, 255, 255, 50);
+                GameObject.Find("HauptmenueHauptContainer").GetComponent<Image>().color = new Color32(0, 0, 0, 100);
+
+                for (int i = 1; i <= guiHauptmenue.ZeileContainerAnzahlZeilen; i++)
+                {
+                    GameObject.Find("HauptmenueZeileContainer" + i.ToString()).GetComponent<Image>().color = new Color32(0, 0, 0, 100);
+                    GameObject.Find("HauptmenueZeileHeader" + i.ToString()).GetComponent<Text>().color = new Color32(255, 255, 255, 255);
+                    GameObject.Find("HauptmenueZeileDetail" + i.ToString()).GetComponent<Text>().color = new Color32(255, 255, 200, 255);
+                    GameObject.Find("HauptmenueZeileDetailLogo" + i.ToString()).GetComponent<Image>().color = new Color32(0, 0, 0, 150);
+                    GameObject.Find("HauptmenueZeileNummer" + i.ToString()).GetComponent<Text>().color = new Color32(255, 255, 255, 255);
+                }
+
+                // Innentuer
+                GameObject.Find("Innentuer").GetComponent<Image>().color = new Color32(0, 0, 0, 100);
+                GameObject.Find("InnentuerHeaderContainer").GetComponent<Image>().color = new Color32(0, 0, 0, 250);
+                GameObject.Find("InnentuerHeaderLogo").GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+                GameObject.Find("InnentuerHeaderText").GetComponent<Text>().color = new Color32(255, 255, 255, 255);
+                GameObject.Find("InnentuerInfoContainer").GetComponent<Image>().color = new Color32(0, 0, 0, 230);
+                GameObject.Find("InnentuerInfoLogo").GetComponent<Image>().color = new Color32(0, 0, 0, 0); // ausgeblendet
+                GameObject.Find("InnentuerInfoText").GetComponent<Text>().color = new Color32(255, 255, 255, 50);
+                GameObject.Find("InnentuerHauptContainer").GetComponent<Image>().color = new Color32(0, 0, 0, 100);
+
+                for (int i = 1; i <= guiInnentuer.ZeileContainerAnzahlZeilen; i++)
+                {
+                    GameObject.Find("InnentuerZeileContainer" + i.ToString()).GetComponent<Image>().color = new Color32(0, 0, 0, 100);
+                    GameObject.Find("InnentuerZeileHeader" + i.ToString()).GetComponent<Text>().color = new Color32(255, 255, 255, 255);
+                    GameObject.Find("InnentuerZeileDetail" + i.ToString()).GetComponent<Text>().color = new Color32(255, 255, 200, 255);
+                    GameObject.Find("InnentuerZeileDetailLogo" + i.ToString()).GetComponent<Image>().color = new Color32(0, 0, 0, 150);
+                    GameObject.Find("InnentuerZeileNummer" + i.ToString()).GetComponent<Text>().color = new Color32(255, 255, 255, 255);
+                }
+
+                // Konfigurator
+                GameObject.Find("Konfigurator").GetComponent<Image>().color = new Color32(0, 0, 0, 100);
+                GameObject.Find("KonfiguratorHeaderContainer").GetComponent<Image>().color = new Color32(0, 0, 0, 250);
+                GameObject.Find("KonfiguratorHeaderLogo").GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+                GameObject.Find("KonfiguratorHeaderText").GetComponent<Text>().color = new Color32(255, 255, 255, 255);
+                GameObject.Find("KonfiguratorInfoContainer").GetComponent<Image>().color = new Color32(0, 0, 0, 230);
+                GameObject.Find("KonfiguratorInfoLogo").GetComponent<Image>().color = new Color32(0, 0, 0, 0); // ausgeblendet
+                GameObject.Find("KonfiguratorInfoText").GetComponent<Text>().color = new Color32(255, 255, 255, 50);
+                GameObject.Find("KonfiguratorInfoNummer").GetComponent<Text>().color = new Color32(255, 255, 255, 255);
+                GameObject.Find("KonfiguratorHauptContainer").GetComponent<Image>().color = new Color32(0, 0, 0, 100);
+
+                for (int i = 1; i <= guiKonfigurator.ZeileContainerAnzahlZeilen; i++)
+                {
+                    GameObject.Find("KonfiguratorZeileContainer" + i.ToString()).GetComponent<Image>().color = new Color32(0, 0, 0, 100);
+                    GameObject.Find("KonfiguratorZeileHeader" + i.ToString()).GetComponent<Text>().color = new Color32(255, 255, 255, 255);
+                    GameObject.Find("KonfiguratorZeileDetail" + i.ToString()).GetComponent<Text>().color = new Color32(255, 255, 200, 255);
+                    GameObject.Find("KonfiguratorZeileDetailLogo" + i.ToString()).GetComponent<Image>().color = new Color32(0, 0, 0, 150);
+                    GameObject.Find("KonfiguratorZeileNummer" + i.ToString()).GetComponent<Text>().color = new Color32(255, 255, 255, 255);
+                }
+
+                for (int i = 1; i <= guiKonfigurator.ZeileContainerAnzahlZeilen; i++)
+                {
+                    for (int materialNr = 1; materialNr <= (guiKonfigurator.ZeileMaterialAnzahlMaterialOptionenX * guiKonfigurator.ZeileMaterialAnzahlMaterialOptionenY); materialNr++)
+                    {
+                        GameObject.Find("KonfiguratorZeileMaterial" + i.ToString() + materialNr.ToString()).GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+                    }
+                }
+
+
+                break;
+            case "hell":
+
+                guiHauptmenue.ZeileContainerColorToggle = new Color32(255, 255, 255, 255);
+
+                // Hauptmenue
+                GameObject.Find("Hauptmenue").GetComponent<Image>().color = new Color32(255, 255, 255, 100);
+                GameObject.Find("HauptmenueHeaderContainer").GetComponent<Image>().color = new Color32(255, 255, 255, 250);
+                GameObject.Find("HauptmenueHeaderLogo").GetComponent<Image>().color = new Color32(0, 0, 0, 255);
+                GameObject.Find("HauptmenueHeaderText").GetComponent<Text>().color = new Color32(0, 0, 0, 255);
+                GameObject.Find("HauptmenueInfoContainer").GetComponent<Image>().color = new Color32(255, 200, 100, 50);
+                GameObject.Find("HauptmenueInfoLogo").GetComponent<Image>().color = new Color32(255, 255, 255, 0); // ausgeblendet
+                GameObject.Find("HauptmenueInfoText").GetComponent<Text>().color = new Color32(0, 0, 0, 255);
+                GameObject.Find("HauptmenueHauptContainer").GetComponent<Image>().color = new Color32(255, 255, 255, 100);
+
+                for (int i = 1; i <= guiHauptmenue.ZeileContainerAnzahlZeilen; i++)
+                {
+                    GameObject.Find("HauptmenueZeileContainer" + i.ToString()).GetComponent<Image>().color = new Color32(255, 255, 255, 100);
+                    GameObject.Find("HauptmenueZeileHeader" + i.ToString()).GetComponent<Text>().color = new Color32(0, 0, 0, 255);
+                    GameObject.Find("HauptmenueZeileDetail" + i.ToString()).GetComponent<Text>().color = new Color32(0, 0, 0, 255);
+                    GameObject.Find("HauptmenueZeileDetailLogo" + i.ToString()).GetComponent<Image>().color = new Color32(255, 200, 100, 150);
+                    GameObject.Find("HauptmenueZeileNummer" + i.ToString()).GetComponent<Text>().color = new Color32(0, 0, 0, 255);
+                }
+
+                // Innentuer
+                GameObject.Find("Innentuer").GetComponent<Image>().color = new Color32(255, 255, 255, 100);
+                GameObject.Find("InnentuerHeaderContainer").GetComponent<Image>().color = new Color32(255, 255, 255, 250);
+                GameObject.Find("InnentuerHeaderLogo").GetComponent<Image>().color = new Color32(0, 0, 0, 255);
+                GameObject.Find("InnentuerHeaderText").GetComponent<Text>().color = new Color32(0, 0, 0, 255);
+                GameObject.Find("InnentuerInfoContainer").GetComponent<Image>().color = new Color32(255, 200, 100, 50);
+                GameObject.Find("InnentuerInfoLogo").GetComponent<Image>().color = new Color32(255, 255, 255, 0); // ausgeblendet
+                GameObject.Find("InnentuerInfoText").GetComponent<Text>().color = new Color32(0, 0, 0, 255);
+                GameObject.Find("InnentuerHauptContainer").GetComponent<Image>().color = new Color32(255, 255, 255, 100);
+
+                for (int i = 1; i <= guiInnentuer.ZeileContainerAnzahlZeilen; i++)
+                {
+                    GameObject.Find("InnentuerZeileContainer" + i.ToString()).GetComponent<Image>().color = new Color32(255, 255, 255, 100);
+                    GameObject.Find("InnentuerZeileHeader" + i.ToString()).GetComponent<Text>().color = new Color32(0, 0, 0, 255);
+                    GameObject.Find("InnentuerZeileDetail" + i.ToString()).GetComponent<Text>().color = new Color32(0, 0, 0, 255);
+                    GameObject.Find("InnentuerZeileDetailLogo" + i.ToString()).GetComponent<Image>().color = new Color32(255, 200, 100, 150);
+                    GameObject.Find("InnentuerZeileNummer" + i.ToString()).GetComponent<Text>().color = new Color32(0, 0, 0, 255);
+                }
+
+                // Konfigurator
+                GameObject.Find("Konfigurator").GetComponent<Image>().color = new Color32(255, 255, 255, 100);
+                GameObject.Find("KonfiguratorHeaderContainer").GetComponent<Image>().color = new Color32(255, 255, 255, 250);
+                GameObject.Find("KonfiguratorHeaderLogo").GetComponent<Image>().color = new Color32(0, 0, 0, 255);
+                GameObject.Find("KonfiguratorHeaderText").GetComponent<Text>().color = new Color32(0, 0, 0, 255);
+                GameObject.Find("KonfiguratorInfoContainer").GetComponent<Image>().color = new Color32(255, 200, 100, 50);
+                GameObject.Find("KonfiguratorInfoLogo").GetComponent<Image>().color = new Color32(255, 255, 255, 0); // ausgeblendet
+                GameObject.Find("KonfiguratorInfoText").GetComponent<Text>().color = new Color32(0, 0, 0, 255);
+                GameObject.Find("KonfiguratorInfoNummer").GetComponent<Text>().color = new Color32(0, 0, 0, 255);
+                GameObject.Find("KonfiguratorHauptContainer").GetComponent<Image>().color = new Color32(255, 255, 255, 100);
+
+                for (int i = 1; i <= guiKonfigurator.ZeileContainerAnzahlZeilen; i++)
+                {
+                    GameObject.Find("KonfiguratorZeileContainer" + i.ToString()).GetComponent<Image>().color = new Color32(255, 255, 255, 100);
+                    GameObject.Find("KonfiguratorZeileHeader" + i.ToString()).GetComponent<Text>().color = new Color32(0, 0, 0, 255);
+                    GameObject.Find("KonfiguratorZeileDetail" + i.ToString()).GetComponent<Text>().color = new Color32(0, 0, 0, 255);
+                    GameObject.Find("KonfiguratorZeileDetailLogo" + i.ToString()).GetComponent<Image>().color = new Color32(255, 200, 100, 150);
+                    GameObject.Find("KonfiguratorZeileNummer" + i.ToString()).GetComponent<Text>().color = new Color32(0, 0, 0, 255);
+                }
+
+                for (int i = 1; i <= guiKonfigurator.ZeileContainerAnzahlZeilen; i++)
+                {
+                    for (int materialNr = 1; materialNr <= (guiKonfigurator.ZeileMaterialAnzahlMaterialOptionenX * guiKonfigurator.ZeileMaterialAnzahlMaterialOptionenY); materialNr++)
+                    {
+                        GameObject.Find("KonfiguratorZeileMaterial" + i.ToString() + materialNr.ToString()).GetComponent<Image>().color = new Color32(0, 0, 0, 200);
+                    }
+                }
+
+                break;
+            default:
+                setzeFarbschema("dunkel");
+                break;
+        }
+    }
+
+
     // Generiere Gesamte GUI
     void generiereGesamteGUI()
     {
@@ -1048,152 +1477,6 @@ public class GUI_Innentuer : MonoBehaviour
         generiereKonfiguratorHauptContainer();
         generiereKonfiguratorHauptContainerZeilen(guiKonfigurator.ZeileContainerAnzahlZeilen);
     }
-
-
-    public void toggleMenue(string menueName, string aktivesMenue)
-    {
-
-        //Debug.Log("rufe toggleMenue auf mit den Parametern ( menueName : " + menueName + " - aktivesMenue : " + aktivesMenue + " )");
-        switch (menueName)
-        {
-
-            // Block Hauptmenü
-            case "Hauptmenü":
-                {
-                    if (aktivesMenue == "")
-                    {
-                        //Debug.Log("case: Hauptmenü - aktivesMenue : " + aktivesMenue);
-                        GameObject.Find(guiHauptmenue.NameInCanvas).GetComponent<CanvasGroup>().alpha = 1.0f;
-                        guiCanvas.AktuellAktivesMenu = guiHauptmenue.Name;
-                    }
-                    else if (aktivesMenue == guiHauptmenue.Name)
-                    {
-                        //Debug.Log("case: Hauptmenü - aktivesMenue : " + aktivesMenue);
-                        GameObject.Find(guiHauptmenue.NameInCanvas).GetComponent<CanvasGroup>().alpha = 0.0f;
-                        guiCanvas.AktuellAktivesMenu = "";
-                    }
-                    else if (aktivesMenue == guiInnentuer.Name)
-                    {
-                        //Debug.Log("case: Hauptmenü - aktivesMenue : " + aktivesMenue);
-                        GameObject.Find(guiHauptmenue.NameInCanvas).GetComponent<CanvasGroup>().alpha = 1.0f;
-                        guiCanvas.AktuellAktivesMenu = guiHauptmenue.Name;
-                        GameObject.Find(guiInnentuer.NameInCanvas).GetComponent<CanvasGroup>().alpha = 0.0f;
-                        GameObject.Find(guiKonfigurator.NameInCanvas).GetComponent<CanvasGroup>().alpha = 0.0f;
-                    }
-                    else if (aktivesMenue == guiKonfigurator.Name)
-                    {
-                        //Debug.Log("case: Hauptmenü - aktivesMenue : " + aktivesMenue);
-                        GameObject.Find(guiHauptmenue.NameInCanvas).GetComponent<CanvasGroup>().alpha = 1.0f;
-                        guiCanvas.AktuellAktivesMenu = guiHauptmenue.Name;
-                        GameObject.Find(guiInnentuer.NameInCanvas).GetComponent<CanvasGroup>().alpha = 0.0f;
-                        GameObject.Find(guiKonfigurator.NameInCanvas).GetComponent<CanvasGroup>().alpha = 0.0f;
-                    }
-                    break;
-                }
-
-
-            case "Innentür":
-                {
-                    if (aktivesMenue == "")
-                    {
-                        //Debug.Log("case: Innentür - aktivesMenue : " + aktivesMenue);
-                        GameObject.Find(guiInnentuer.NameInCanvas).GetComponent<CanvasGroup>().alpha = 1.0f;
-                        guiCanvas.AktuellAktivesMenu = guiInnentuer.Name;
-                    }
-                    else if (aktivesMenue == guiHauptmenue.Name)
-                    {
-                        //Debug.Log("case: Innentür - aktivesMenue : " + aktivesMenue);
-                        GameObject.Find(guiInnentuer.NameInCanvas).GetComponent<CanvasGroup>().alpha = 1.0f;
-                        guiCanvas.AktuellAktivesMenu = guiInnentuer.Name;
-                        GameObject.Find(guiHauptmenue.NameInCanvas).GetComponent<CanvasGroup>().alpha = 0.0f;
-                    }
-                    else if (aktivesMenue == guiInnentuer.Name)
-                    {
-                        //Debug.Log("case: Innentür - aktivesMenue : " + aktivesMenue);
-                        GameObject.Find(guiInnentuer.NameInCanvas).GetComponent<CanvasGroup>().alpha = 0.0f;
-                        if (GameObject.Find(guiKonfigurator.NameInCanvas).GetComponent<CanvasGroup>().alpha == 0.5f)
-                        {
-                            GameObject.Find(guiKonfigurator.NameInCanvas).GetComponent<CanvasGroup>().alpha = 1.0f;
-                            guiCanvas.AktuellAktivesMenu = guiKonfigurator.Name;
-                        }
-                        else
-                        {
-                            guiCanvas.AktuellAktivesMenu = "";
-                        }
-                    }
-                    else if (aktivesMenue == guiKonfigurator.Name)
-                    {
-                        //Debug.Log("case: Innentür - aktivesMenue : " + aktivesMenue);
-                        GameObject.Find(guiInnentuer.NameInCanvas).GetComponent<CanvasGroup>().alpha = 1.0f;
-                        guiCanvas.AktuellAktivesMenu = guiInnentuer.Name;
-                        GameObject.Find(guiKonfigurator.NameInCanvas).GetComponent<CanvasGroup>().alpha = 0.5f;
-                    }
-                    break;
-                }
-
-
-            case "Konfigurator":
-                {
-                    if (aktivesMenue == "")
-                    {
-                        //Debug.Log("case: Konfigurator - aktivesMenue : " + aktivesMenue);
-                        GameObject.Find(guiKonfigurator.NameInCanvas).GetComponent<CanvasGroup>().alpha = 1.0f;
-                        guiCanvas.AktuellAktivesMenu = guiKonfigurator.Name;
-                        // Spezial
-                        aktuelleGetoggelteInnentuer.Index = 0;
-                        uebergiebParameterAusMenueInnentuerInMenueKonfigurator(ergebnisInnentuer);
-                        //
-                    }
-                    else if (aktivesMenue == guiHauptmenue.Name)
-                    {
-                        //Debug.Log("case: Konfigurator - aktivesMenue : " + aktivesMenue);
-                        GameObject.Find(guiKonfigurator.NameInCanvas).GetComponent<CanvasGroup>().alpha = 1.0f;
-                        guiCanvas.AktuellAktivesMenu = guiKonfigurator.Name;
-                        // Spezial
-                        aktuelleGetoggelteInnentuer.Index = 0;
-                        uebergiebParameterAusMenueInnentuerInMenueKonfigurator(ergebnisInnentuer);
-                        //
-                        GameObject.Find(guiHauptmenue.NameInCanvas).GetComponent<CanvasGroup>().alpha = 0.0f;
-                    }
-                    else if (aktivesMenue == guiInnentuer.Name)
-                    {
-                        //Debug.Log("case: Konfigurator - aktivesMenue : " + aktivesMenue);
-                        GameObject.Find(guiKonfigurator.NameInCanvas).GetComponent<CanvasGroup>().alpha = 1.0f;
-                        guiCanvas.AktuellAktivesMenu = guiKonfigurator.Name;
-                        // Spezial
-                        //Debug.Log("ergebnisInnentuer :" + ergebnisInnentuer.Count().ToString());
-                        aktuelleGetoggelteInnentuer.Index = 0;
-                        uebergiebParameterAusMenueInnentuerInMenueKonfigurator(ergebnisInnentuer);
-                        //
-                        GameObject.Find(guiInnentuer.NameInCanvas).GetComponent<CanvasGroup>().alpha = 0.5f;
-                    }
-                    else if (aktivesMenue == guiKonfigurator.Name)
-                    {
-                        //Debug.Log("case: Konfigurator - aktivesMenue : " + aktivesMenue);
-                        GameObject.Find(guiKonfigurator.NameInCanvas).GetComponent<CanvasGroup>().alpha = 0.0f;
-                        if (GameObject.Find(guiInnentuer.NameInCanvas).GetComponent<CanvasGroup>().alpha == 0.5f)
-                        {
-                            GameObject.Find(guiInnentuer.NameInCanvas).GetComponent<CanvasGroup>().alpha = 1.0f;
-                            guiCanvas.AktuellAktivesMenu = guiInnentuer.Name;
-                        }
-                        else
-                        {
-                            guiCanvas.AktuellAktivesMenu = "";
-                        }
-                    }
-                    break;
-                }
-
-
-            default:
-                {
-                    Debug.Log("ACHTUNG: Keinen case gefunden in: [toggleMenue]");
-                    break;
-                }
-        }
-
-    }
-
 
     public void ermitteleAktionAnhandEingabeUndAktivemMenue(string eingabe)
     {
@@ -1371,7 +1654,7 @@ public class GUI_Innentuer : MonoBehaviour
     }
 
 
-    //Konfiguration der zu den jeweiligen Menüpunkten zugehörigen auszuführenden Aktionen
+    // Konfiguration der zu den jeweiligen Menüpunkten zugehörigen auszuführenden Aktionen
     void fuehreAktionAus(string aktion)
     {
         //Debug.Log("Führe Aktion: " + aktion + " aus");
@@ -1392,6 +1675,7 @@ public class GUI_Innentuer : MonoBehaviour
 
                     toggleMenuePunkt(1, 2);
                     hauptmenueOutputParameter.Farbeschema = hauptmenueParameter.ToggleAktion[1][hauptmenueParameter.TogglePunktIndex[1]];
+                    setzeFarbschema(hauptmenueOutputParameter.Farbeschema);
                     StartCoroutine(LerpColor(guiHauptmenue.ZeileContainerNameInCanvas + "2"));
                     //Debug.Log("Setze Farbschema = " + hauptmenueOutputParameter.Farbeschema);
                     break;
@@ -1451,17 +1735,29 @@ public class GUI_Innentuer : MonoBehaviour
             case "25":
                 {
                     toggleMenuePunkt(2, 5);
-                    innentuerOutputParameter.Oeffnungsrichtung = innentuerParameter.ToggleAktion[4][innentuerParameter.TogglePunktIndex[4]];
+                    innentuerOutputParameter.Kantenrundung = innentuerParameter.ToggleAktion[4][innentuerParameter.TogglePunktIndex[4]];
                     StartCoroutine(LerpColor(guiInnentuer.ZeileContainerNameInCanvas + "5"));
-                    //Debug.Log("Setze Öffnungsrichtung = " + innentuerOutputParameter.Oeffnungsrichtung);
+                    //Debug.Log("Setze Kantenrundung = " + innentuerOutputParameter.Kantenrundung);
+                    ergebnisInnentuer = ermitteleAlleTrefferAusTabelleInnentuerMitAuswahlkriterien();
+                    GameObject.Find(guiInnentuer.InfoTextNameInCanvas).GetComponent<Text>().text = "Treffer in der Datenbank mit aktuellen Kriterien: " + ergebnisInnentuer.Count().ToString();
                     break;
                 }
             case "26":
                 {
                     toggleMenuePunkt(2, 6);
-                    innentuerOutputParameter.Frontseite = innentuerParameter.ToggleAktion[5][innentuerParameter.TogglePunktIndex[5]];
+                    innentuerOutputParameter.Oeffnungsrichtung = innentuerParameter.ToggleAktion[5][innentuerParameter.TogglePunktIndex[5]];
                     StartCoroutine(LerpColor(guiInnentuer.ZeileContainerNameInCanvas + "6"));
+                    //Debug.Log("Setze Öffnungsrichtung = " + innentuerOutputParameter.Oeffnungsrichtung);
+                    toggleAchsenspiegelung("x");
+                    break;
+                }
+            case "27":
+                {
+                    toggleMenuePunkt(2, 7);
+                    innentuerOutputParameter.Frontseite = innentuerParameter.ToggleAktion[6][innentuerParameter.TogglePunktIndex[6]];
+                    StartCoroutine(LerpColor(guiInnentuer.ZeileContainerNameInCanvas + "7"));
                     //Debug.Log("Setze Frontseite = " + innentuerOutputParameter.Frontseite);
+                    toggleAchsenspiegelung("z");
                     break;
                 }
             case "30":
@@ -1478,6 +1774,7 @@ public class GUI_Innentuer : MonoBehaviour
                     StartCoroutine(LerpColor(guiKonfigurator.ZeileContainerNameInCanvas + "1"));
                     //Debug.Log("Toggle Material Zarge = " + "");
                     toggleMaterialImKonfigurator(1);
+                    toggleMaterialImKonfigurator(2); // Kombitoggeln Tuerblatt une Zarge
                     break;
                 }
             case "32":
@@ -1486,6 +1783,7 @@ public class GUI_Innentuer : MonoBehaviour
                     StartCoroutine(LerpColor(guiKonfigurator.ZeileContainerNameInCanvas + "2"));
                     //Debug.Log("Toggle Material Tuerblatt = " + "");
                     toggleMaterialImKonfigurator(2);
+                    toggleMaterialImKonfigurator(1); // Kombitoggeln Tuerblatt une Zarge
                     break;
                 }
             case "33":
@@ -1511,7 +1809,6 @@ public class GUI_Innentuer : MonoBehaviour
                 }
         }
     }
-
 
     void uebergiebParameterAusMenueInnentuerInMenueKonfigurator(List<T_Innentuer> ergebnisInnentuer)
     {
@@ -1903,6 +2200,194 @@ public class GUI_Innentuer : MonoBehaviour
     }
 
 
+    // Togglings
+
+    public void toggleMenue(string menueName, string aktivesMenue)
+    {
+
+        //Debug.Log("rufe toggleMenue auf mit den Parametern ( menueName : " + menueName + " - aktivesMenue : " + aktivesMenue + " )");
+        switch (menueName)
+        {
+
+            // Block Hauptmenü
+            case "Hauptmenü":
+                {
+                    if (aktivesMenue == "")
+                    {
+                        //Debug.Log("case: Hauptmenü - aktivesMenue : " + aktivesMenue);
+                        GameObject.Find(guiHauptmenue.NameInCanvas).GetComponent<CanvasGroup>().alpha = 1.0f;
+                        guiCanvas.AktuellAktivesMenu = guiHauptmenue.Name;
+                    }
+                    else if (aktivesMenue == guiHauptmenue.Name)
+                    {
+                        //Debug.Log("case: Hauptmenü - aktivesMenue : " + aktivesMenue);
+                        GameObject.Find(guiHauptmenue.NameInCanvas).GetComponent<CanvasGroup>().alpha = 0.0f;
+                        guiCanvas.AktuellAktivesMenu = "";
+                    }
+                    else if (aktivesMenue == guiInnentuer.Name)
+                    {
+                        //Debug.Log("case: Hauptmenü - aktivesMenue : " + aktivesMenue);
+                        GameObject.Find(guiHauptmenue.NameInCanvas).GetComponent<CanvasGroup>().alpha = 1.0f;
+                        guiCanvas.AktuellAktivesMenu = guiHauptmenue.Name;
+                        GameObject.Find(guiInnentuer.NameInCanvas).GetComponent<CanvasGroup>().alpha = 0.0f;
+                        GameObject.Find(guiKonfigurator.NameInCanvas).GetComponent<CanvasGroup>().alpha = 0.0f;
+                    }
+                    else if (aktivesMenue == guiKonfigurator.Name)
+                    {
+                        //Debug.Log("case: Hauptmenü - aktivesMenue : " + aktivesMenue);
+                        GameObject.Find(guiHauptmenue.NameInCanvas).GetComponent<CanvasGroup>().alpha = 1.0f;
+                        guiCanvas.AktuellAktivesMenu = guiHauptmenue.Name;
+                        GameObject.Find(guiInnentuer.NameInCanvas).GetComponent<CanvasGroup>().alpha = 0.0f;
+                        GameObject.Find(guiKonfigurator.NameInCanvas).GetComponent<CanvasGroup>().alpha = 0.0f;
+                    }
+                    break;
+                }
+
+
+            case "Innentür":
+                {
+                    if (aktivesMenue == "")
+                    {
+                        //Debug.Log("case: Innentür - aktivesMenue : " + aktivesMenue);
+                        GameObject.Find(guiInnentuer.NameInCanvas).GetComponent<CanvasGroup>().alpha = 1.0f;
+                        guiCanvas.AktuellAktivesMenu = guiInnentuer.Name;
+                    }
+                    else if (aktivesMenue == guiHauptmenue.Name)
+                    {
+                        //Debug.Log("case: Innentür - aktivesMenue : " + aktivesMenue);
+                        GameObject.Find(guiInnentuer.NameInCanvas).GetComponent<CanvasGroup>().alpha = 1.0f;
+                        guiCanvas.AktuellAktivesMenu = guiInnentuer.Name;
+                        GameObject.Find(guiHauptmenue.NameInCanvas).GetComponent<CanvasGroup>().alpha = 0.0f;
+                    }
+                    else if (aktivesMenue == guiInnentuer.Name)
+                    {
+                        //Debug.Log("case: Innentür - aktivesMenue : " + aktivesMenue);
+                        GameObject.Find(guiInnentuer.NameInCanvas).GetComponent<CanvasGroup>().alpha = 0.0f;
+                        if (GameObject.Find(guiKonfigurator.NameInCanvas).GetComponent<CanvasGroup>().alpha == 0.5f)
+                        {
+                            GameObject.Find(guiKonfigurator.NameInCanvas).GetComponent<CanvasGroup>().alpha = 1.0f;
+                            guiCanvas.AktuellAktivesMenu = guiKonfigurator.Name;
+                        }
+                        else
+                        {
+                            guiCanvas.AktuellAktivesMenu = "";
+                        }
+                    }
+                    else if (aktivesMenue == guiKonfigurator.Name)
+                    {
+                        //Debug.Log("case: Innentür - aktivesMenue : " + aktivesMenue);
+                        GameObject.Find(guiInnentuer.NameInCanvas).GetComponent<CanvasGroup>().alpha = 1.0f;
+                        guiCanvas.AktuellAktivesMenu = guiInnentuer.Name;
+                        GameObject.Find(guiKonfigurator.NameInCanvas).GetComponent<CanvasGroup>().alpha = 0.5f;
+                    }
+                    break;
+                }
+
+
+            case "Konfigurator":
+                {
+                    if (aktivesMenue == "")
+                    {
+                        //Debug.Log("case: Konfigurator - aktivesMenue : " + aktivesMenue);
+                        GameObject.Find(guiKonfigurator.NameInCanvas).GetComponent<CanvasGroup>().alpha = 1.0f;
+                        guiCanvas.AktuellAktivesMenu = guiKonfigurator.Name;
+                        // Spezial
+                        aktuelleGetoggelteInnentuer.Index = 0;
+                        uebergiebParameterAusMenueInnentuerInMenueKonfigurator(ergebnisInnentuer);
+                        //
+                    }
+                    else if (aktivesMenue == guiHauptmenue.Name)
+                    {
+                        //Debug.Log("case: Konfigurator - aktivesMenue : " + aktivesMenue);
+                        GameObject.Find(guiKonfigurator.NameInCanvas).GetComponent<CanvasGroup>().alpha = 1.0f;
+                        guiCanvas.AktuellAktivesMenu = guiKonfigurator.Name;
+                        // Spezial
+                        aktuelleGetoggelteInnentuer.Index = 0;
+                        uebergiebParameterAusMenueInnentuerInMenueKonfigurator(ergebnisInnentuer);
+                        //
+                        GameObject.Find(guiHauptmenue.NameInCanvas).GetComponent<CanvasGroup>().alpha = 0.0f;
+                    }
+                    else if (aktivesMenue == guiInnentuer.Name)
+                    {
+                        //Debug.Log("case: Konfigurator - aktivesMenue : " + aktivesMenue);
+                        GameObject.Find(guiKonfigurator.NameInCanvas).GetComponent<CanvasGroup>().alpha = 1.0f;
+                        guiCanvas.AktuellAktivesMenu = guiKonfigurator.Name;
+                        // Spezial
+                        //Debug.Log("ergebnisInnentuer :" + ergebnisInnentuer.Count().ToString());
+                        aktuelleGetoggelteInnentuer.Index = 0;
+                        uebergiebParameterAusMenueInnentuerInMenueKonfigurator(ergebnisInnentuer);
+                        //
+                        GameObject.Find(guiInnentuer.NameInCanvas).GetComponent<CanvasGroup>().alpha = 0.5f;
+                    }
+                    else if (aktivesMenue == guiKonfigurator.Name)
+                    {
+                        //Debug.Log("case: Konfigurator - aktivesMenue : " + aktivesMenue);
+                        GameObject.Find(guiKonfigurator.NameInCanvas).GetComponent<CanvasGroup>().alpha = 0.0f;
+                        if (GameObject.Find(guiInnentuer.NameInCanvas).GetComponent<CanvasGroup>().alpha == 0.5f)
+                        {
+                            GameObject.Find(guiInnentuer.NameInCanvas).GetComponent<CanvasGroup>().alpha = 1.0f;
+                            guiCanvas.AktuellAktivesMenu = guiInnentuer.Name;
+                        }
+                        else
+                        {
+                            guiCanvas.AktuellAktivesMenu = "";
+                        }
+                    }
+                    break;
+                }
+
+
+            default:
+                {
+                    Debug.Log("ACHTUNG: Keinen case gefunden in: [toggleMenue]");
+                    break;
+                }
+        }
+    }
+
+    void toggleMenuePunkt(int menue, int untermenue)
+    {
+        //Debug.Log("aktueller Index: " + innentuerParameter.TogglePunktIndex[untermenue - 1].ToString());
+        //Debug.Log("Anzahl Toggles" + innentuerParameter.Toggle[untermenue - 1].Count());
+        switch (menue)
+        {
+            case 1:
+                {
+                    if (hauptmenueParameter.TogglePunktIndex[untermenue - 1] < (hauptmenueParameter.Toggle[untermenue - 1].Count() - 1))
+                    {
+                        hauptmenueParameter.TogglePunktIndex[untermenue - 1] += 1;
+                    }
+                    else
+                    {
+                        hauptmenueParameter.TogglePunktIndex[untermenue - 1] = 0;
+                    }
+                    GameObject.Find(guiHauptmenue.ZeileDetailNameInCanvas + untermenue.ToString()).GetComponent<Text>().text = hauptmenueParameter.Toggle[untermenue - 1][hauptmenueParameter.TogglePunktIndex[untermenue - 1]];
+                    break;
+                }
+            case 2:
+                {
+                    if (innentuerParameter.TogglePunktIndex[untermenue - 1] < (innentuerParameter.Toggle[untermenue - 1].Count() - 1))
+                    {
+                        innentuerParameter.TogglePunktIndex[untermenue - 1] += 1;
+                    }
+                    else
+                    {
+                        innentuerParameter.TogglePunktIndex[untermenue - 1] = 0;
+                    }
+                    GameObject.Find(guiInnentuer.ZeileDetailNameInCanvas + untermenue.ToString()).GetComponent<Text>().text = innentuerParameter.Toggle[untermenue - 1][innentuerParameter.TogglePunktIndex[untermenue - 1]];
+                    break;
+                }
+            case 3:
+                {
+                    break;
+                }
+            default:
+                {
+                    break;
+                }
+        }
+    }
+
     void toggleInnentuerImKonfigurator()
     {
 
@@ -1922,9 +2407,7 @@ public class GUI_Innentuer : MonoBehaviour
                 uebergiebParameterAusMenueInnentuerInMenueKonfigurator(ergebnisInnentuer);
             }
         }
-
     }
-
 
     void toggleMaterialImKonfigurator(int menuepunkt)
     {
@@ -1941,10 +2424,40 @@ public class GUI_Innentuer : MonoBehaviour
 
         //updateKonfigurator();
         uebergiebParameterAusMenueInnentuerInMenueKonfigurator(ergebnisInnentuer);
+    }
 
+    void toggleAchsenspiegelung(string achse)
+    {
+
+        // ermittele den Vektor localScale von INNENTUER
+        Vector3 v = GameObject.Find("INNENTUER").GetComponent<Transform>().localScale;
+
+        // negiere abhängig von der Achse entsprechend x oder z
+        if (achse == "x")
+        {
+            v.x *= -1;
+        }
+        else
+        {
+            v.z *= -1;
+        }
+
+        // aktualisere Vektor localScale von INNENTUER
+        GameObject.Find("INNENTUER").transform.localScale = v;
+
+        // Achsenspiegelung: abhängig von der Spieglung, muss auch der Winkel des Rotationspunktes gesetzt werden
+        if (((v.x == 1) && (v.z == 1)) || ((v.x == -1) && (v.z == -1)))
+        {
+            rotationWinkel = -90.0f;
+        }
+        else
+        {
+            rotationWinkel = 90.0f;
+        }
     }
 
 
+    // Updates
     void updateKonfigurator()
     {
 
@@ -2008,9 +2521,6 @@ public class GUI_Innentuer : MonoBehaviour
 
     }
 
-
-    // Philipp
-
     void updateAktuellGetoggelteInnentuer()
     {
         aktuelleGetoggelteInnentuer.Zarge = ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Zarge;
@@ -2070,57 +2580,6 @@ public class GUI_Innentuer : MonoBehaviour
         //Debug.Log("aktuelleGetoggelteMaterial.Schwelle :" + aktuelleGetoggelteMaterial.Schwelle);
     }
 
-
-    // ENDE Philipp
-
-
-    void toggleMenuePunkt(int menue, int untermenue)
-    {
-        //Debug.Log("aktueller Index: " + innentuerParameter.TogglePunktIndex[untermenue - 1].ToString());
-        //Debug.Log("Anzahl Toggles" + innentuerParameter.Toggle[untermenue - 1].Count());
-        switch (menue)
-        {
-            case 1:
-                {
-                    if (hauptmenueParameter.TogglePunktIndex[untermenue - 1] < (hauptmenueParameter.Toggle[untermenue - 1].Count() - 1))
-                    {
-                        hauptmenueParameter.TogglePunktIndex[untermenue - 1] += 1;
-                    }
-                    else
-                    {
-                        hauptmenueParameter.TogglePunktIndex[untermenue - 1] = 0;
-                    }
-                    GameObject.Find(guiHauptmenue.ZeileDetailNameInCanvas + untermenue.ToString()).GetComponent<Text>().text = hauptmenueParameter.Toggle[untermenue - 1][hauptmenueParameter.TogglePunktIndex[untermenue - 1]];
-                    break;
-                }
-            case 2:
-                {
-                    if (innentuerParameter.TogglePunktIndex[untermenue - 1] < (innentuerParameter.Toggle[untermenue - 1].Count() - 1))
-                    {
-                        innentuerParameter.TogglePunktIndex[untermenue - 1] += 1;
-                    }
-                    else
-                    {
-                        innentuerParameter.TogglePunktIndex[untermenue - 1] = 0;
-                    }
-                    GameObject.Find(guiInnentuer.ZeileDetailNameInCanvas + untermenue.ToString()).GetComponent<Text>().text = innentuerParameter.Toggle[untermenue - 1][innentuerParameter.TogglePunktIndex[untermenue - 1]];
-                    break;
-                }
-            case 3:
-                {
-                    break;
-                }
-            default:
-                {
-                    break;
-                }
-
-        }
-
-
-
-    }
-
     void updateHauptmenue(HauptmenueParameter parameter)
     {
 
@@ -2174,7 +2633,7 @@ public class GUI_Innentuer : MonoBehaviour
         // nach Neustart von Unity übernommen (?)
         float duration = 0.2f; // Zeit in Sekunden.
         float smoothness = 0.02f; // This will determine the smoothness of the lerp. Smaller values are smoother. Really it's the time between updates.
-        Color32 floatColor = new Color32(0, 0, 0, 255);
+        Color32 floatColor = guiHauptmenue.ZeileContainerColorToggle;
 
         colorLerpAktive = true;
         myImage = GameObject.Find(gameObjectName).GetComponent<Image>();
@@ -3642,239 +4101,5 @@ public class GUI_Innentuer : MonoBehaviour
         // Text
         myText.text = nummer.ToString();
     }
-
-
-
-
-    // ---------------------------------------------------------------------------------------------------
-    // Datenbank-Abfragen
-    // ---------------------------------------------------------------------------------------------------
-
-    List<T_Band> dBAbfrageBand()
-    {
-        RestClientManager restClient = new RestClientManager();
-        string query = "SELECT * FROM Thomas2.Band";
-        //Debug.Log(query);
-        List<T_Band> queryResult = restClient.GetExecuteResultsBand(query);
-        return queryResult;
-    }
-
-    List<T_Bandaufnahme> dBAbfrageBandaufnahme()
-    {
-        RestClientManager restClient = new RestClientManager();
-        string query = "SELECT * FROM Thomas2.Bandaufnahme";
-        //Debug.Log(query);
-        List<T_Bandaufnahme> queryResult = restClient.GetExecuteResultsBandaufnahme(query);
-        return queryResult;
-    }
-
-    List<T_Druecker> dBAbfrageDruecker()
-    {
-        RestClientManager restClient = new RestClientManager();
-        string query = "SELECT * FROM Thomas2.Druecker";
-        //Debug.Log(query);
-        List<T_Druecker> queryResult = restClient.GetExecuteResultsDruecker(query);
-        return queryResult;
-    }
-
-    List<T_Schliessblech> dBAbfrageSchliessblech()
-    {
-        RestClientManager restClient = new RestClientManager();
-        string query = "SELECT * FROM Thomas2.Schliessblech";
-        //Debug.Log(query);
-        List<T_Schliessblech> queryResult = restClient.GetExecuteResultsSchliessblech(query);
-        return queryResult;
-    }
-
-    List<T_Schlosskasten> dBAbfrageSchlosskasten()
-    {
-        RestClientManager restClient = new RestClientManager();
-        string query = "SELECT * FROM Thomas2.Schlosskasten";
-        //Debug.Log(query);
-        List<T_Schlosskasten> queryResult = restClient.GetExecuteResultsSchlosskasten(query);
-        return queryResult;
-    }
-
-    List<T_Schwelle> dBAbfrageSchwelle()
-    {
-        RestClientManager restClient = new RestClientManager();
-        string query = "SELECT * FROM Thomas2.Schwelle";
-        //Debug.Log(query);
-        List<T_Schwelle> queryResult = restClient.GetExecuteResultsSchwelle(query);
-        return queryResult;
-    }
-
-    List<T_Tuerblatt> dBAbfrageTuerblatt()
-    {
-        RestClientManager restClient = new RestClientManager();
-        string query = "SELECT * FROM Thomas2.Tuerblatt";
-        //Debug.Log(query);
-        List<T_Tuerblatt> queryResult = restClient.GetExecuteResultsTuerblatt(query);
-        return queryResult;
-    }
-
-    List<T_Zarge> dBAbfrageZarge()
-    {
-        RestClientManager restClient = new RestClientManager();
-        string query = "SELECT * FROM Thomas2.Zarge";
-        //Debug.Log(query);
-        List<T_Zarge> queryResult = restClient.GetExecuteResultsZarge(query);
-        return queryResult;
-    }
-
-    List<T_Innentuer> dBAbfrageInnentuer()
-    {
-        RestClientManager restClient = new RestClientManager();
-        string query = "SELECT * FROM Thomas2.Innentuer";
-        //Debug.Log(query);
-        List<T_Innentuer> queryResult = restClient.GetExecuteResultsInnentuer(query);
-        return queryResult;
-    }
-
-    List<T_Objektteil> dBAbfrageObjektteil()
-    {
-        RestClientManager restClient = new RestClientManager();
-        string query = "SELECT * FROM Thomas2.Objektteil";
-        //Debug.Log(query);
-        List<T_Objektteil> queryResult = restClient.GetExecuteResultsObjektteil(query);
-        return queryResult;
-    }
-
-    List<T_Hersteller> dBAbfrageHersteller()
-    {
-        RestClientManager restClient = new RestClientManager();
-        string query = "SELECT * FROM Thomas2.Hersteller";
-        //Debug.Log(query);
-        List<T_Hersteller> queryResult = restClient.GetExecuteResultsHersteller(query);
-        return queryResult;
-    }
-
-    List<T_MAT> dBAbfrageMAT()
-    {
-        RestClientManager restClient = new RestClientManager();
-        string query = "SELECT * FROM Thomas2.MAT";
-        //Debug.Log(query);
-        List<T_MAT> queryResult = restClient.GetExecuteResultsMAT(query);
-        return queryResult;
-    }
-
-    List<T_Innentuer> ermitteleAlleTrefferAusTabelleInnentuerMitAuswahlkriterien()
-    {
-  
-        // gehe alle Zeilen der Tabelle Innentuer durch ..
-        ergebnisInnentuer.Clear();
-        ergebnisInnentuerNachCheckHoehe.Clear();
-        ergebnisInnentuerNachCheckBreite.Clear();
-        ergebnisInnentuerNachCheckWandstaerke.Clear();
-        ergebnisInnentuerNachCheckBekleidungsbreite.Clear();
-
-        //Debug.Log("-----------ergebnisInnentuer.Count() START : " + ergebnisInnentuer.Count().ToString());
-
-
-        foreach (T_Innentuer zeileInnentuer in tabelleInnentuer)
-        {
-            // .. und ermittele aus der entsprechenden Spalte die Zargen-ID
-            // gehe alle Zeilen der Tabelle Zargen durch ..
-
-            foreach (T_Zarge zeileZarge in tabelleZarge)
-            {
-                // .. und prüfe nur in den Zeilen mit der relevanten Zargen-ID, ..
-                if (zeileZarge.Id == zeileInnentuer.Zarge)
-                {
-                    //Debug.Log("-----------innentuerOutputParameter.HoeheDIN) : " + innentuerOutputParameter.HoeheDIN);
-                    // ob die Höhe der Zargen-Id der momentan eingestelletn Höhe ist
-                    if ((zeileZarge.HoeheDIN.ToString() == innentuerOutputParameter.HoeheDIN) || (innentuerOutputParameter.HoeheDIN == "%"))
-                    {
-                        ergebnisInnentuerNachCheckHoehe.Add(zeileInnentuer);
-                    }
-                }
-            }
-        }
-        Debug.Log("-----------ergebnisInnentuerNachCheckHoehe.Count() nach Hoehe : " + ergebnisInnentuerNachCheckHoehe.Count().ToString());
-        Debug.Log("-----------ergebnisInnentuer.Count() nach Hoehe : " + ergebnisInnentuer.Count().ToString());
-        ergebnisInnentuer = ergebnisInnentuerNachCheckHoehe;
-
-        // wenn es mindesten einen Treffer nach Check Hoehe gab, mache weiter
-        if (ergebnisInnentuerNachCheckHoehe.Count() > 0)
-        {
-            foreach (T_Innentuer zeileInnentuerNachCheckHoehe in ergebnisInnentuerNachCheckHoehe)
-            {
-                foreach (T_Zarge zeileZarge in tabelleZarge)
-                {
-                    if (zeileZarge.Id == zeileInnentuerNachCheckHoehe.Zarge)
-                    {
-                        //Debug.Log("-----------innentuerOutputParameter.BreiteDIN) : " + innentuerOutputParameter.BreiteDIN);
-                        if ((zeileZarge.BreiteDIN.ToString() == innentuerOutputParameter.BreiteDIN) || (innentuerOutputParameter.BreiteDIN == "%"))
-                        {
-                            ergebnisInnentuerNachCheckBreite.Add(zeileInnentuerNachCheckHoehe);
-                        }
-                    }
-                }
-            }
-            ergebnisInnentuer = ergebnisInnentuerNachCheckBreite;
-            Debug.Log("-----------ergebnisInnentuerNachCheckBreite.Count() nach Breite : " + ergebnisInnentuerNachCheckBreite.Count().ToString());
-            Debug.Log("-----------ergebnisInnentuer.Count() nach Breite : " + ergebnisInnentuer.Count().ToString());
-
-            // wenn es mindesten einen Treffer nach Check Breite gab, mache weiter
-            if (ergebnisInnentuerNachCheckBreite.Count() > 0)
-            {
-                foreach (T_Innentuer zeileInnentuerNachCheckBreite in ergebnisInnentuerNachCheckBreite)
-                {
-                    foreach (T_Zarge zeileZarge in tabelleZarge)
-                    {
-                        if (zeileZarge.Id == zeileInnentuerNachCheckBreite.Zarge)
-                        {
-                            //Debug.Log("-----------innentuerOutputParameter.Wandstärke) : " + innentuerOutputParameter.Wandstaerke);
-                            if ((zeileZarge.Wandstaerke.ToString() == innentuerOutputParameter.Wandstaerke) || (innentuerOutputParameter.Wandstaerke == "%"))
-                            {
-                                ergebnisInnentuerNachCheckWandstaerke.Add(zeileInnentuerNachCheckBreite);
-                            }
-                        }
-                    }
-                }
-                ergebnisInnentuer = ergebnisInnentuerNachCheckWandstaerke;
-                Debug.Log("-----------ergebnisInnentuerNachCheckWandstaerke.Count() nachWandstaerke : " + ergebnisInnentuerNachCheckWandstaerke.Count().ToString());
-                Debug.Log("-----------ergebnisInnentuer.Count() nach Wandstaerke : " + ergebnisInnentuer.Count().ToString());
-
-                // wenn es mindesten einen Treffer nach Check Wandstaerke gab, mache weiter
-                if (ergebnisInnentuerNachCheckWandstaerke.Count() > 0)
-                {
-                    foreach (T_Innentuer zeileInnentuerNachCheckWandstaerke in ergebnisInnentuerNachCheckWandstaerke)
-                    {
-                        foreach (T_Zarge zeileZarge in tabelleZarge)
-                        {
-                            if (zeileZarge.Id == zeileInnentuerNachCheckWandstaerke.Zarge)
-                            {
-                                //Debug.Log("-----------innentuerOutputParameter.Bekleidungsbreite) : " + innentuerOutputParameter.Bekleidungsbreite);
-                                if ((zeileZarge.Bekleidungsbreite.ToString() == innentuerOutputParameter.Bekleidungsbreite) || (innentuerOutputParameter.Bekleidungsbreite == "%"))
-                                {
-                                    ergebnisInnentuerNachCheckBekleidungsbreite.Add(zeileInnentuerNachCheckWandstaerke);
-                                }
-                            }
-                        }
-                    }
-                    ergebnisInnentuer = ergebnisInnentuerNachCheckBekleidungsbreite;
-                    Debug.Log("-----------ergebnisInnentuerNachCheckBekleidungsbreite.Count() nach Bekleidungsbreite : " + ergebnisInnentuerNachCheckBekleidungsbreite.Count().ToString());
-                    Debug.Log("-----------ergebnisInnentuer.Count() nach Bekleidungsbreite : " + ergebnisInnentuer.Count().ToString());
-
-                }
-                else
-                {
-                    ergebnisInnentuer.Clear();
-                }
-            }
-            else
-            {
-                ergebnisInnentuer.Clear();
-            }
-        }
-        else
-        {
-            ergebnisInnentuer.Clear();
-        }
-
-        return ergebnisInnentuer;
-    }
-
 
 }

@@ -110,8 +110,8 @@ public class GENERATOR_Innentuer : MonoBehaviour
     private Transform rotierachseBezug;
     public float rotationZeit = 1.0f;
     public float rotationWinkel = -90.0f;
-    private bool rotating = false;
-    private bool tuerAuf = false;
+    public bool rotating = false;
+    public bool tuerAuf = false;
 
     // ---------------------------------------------------------------------------------------------------
     // GUI
@@ -143,18 +143,16 @@ public class GENERATOR_Innentuer : MonoBehaviour
      void Awake()
     {
         // leite Variablen ab
-        objektBestandteileAnzahl = objektBestandteile.Length;
-        objektBestandteileAktuell = new string[objektBestandteileAnzahl];
+        //objektBestandteileAnzahl = objektBestandteile.Length;
+        //objektBestandteileAktuell = new string[objektBestandteileAnzahl];
     }
 
     // Start is called before the first frame update
     void Start()
     {
-
         Schritt_1();
         Schritt_2();
         toggleMaterial3();
-
     }
 
     // Update is called once per frame
@@ -407,7 +405,6 @@ public class GENERATOR_Innentuer : MonoBehaviour
 
     }
  
-
     public void toggleMaterial3()
     {
 
@@ -800,7 +797,5 @@ public class GENERATOR_Innentuer : MonoBehaviour
 
         rotating = false;
     }
-
-
 
 }

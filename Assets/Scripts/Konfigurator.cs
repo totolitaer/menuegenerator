@@ -54,64 +54,105 @@ public class Konfigurator : MonoBehaviour
         if (!gui.colorLerpAktive)
         {
 
+           
             if (Input.GetKeyDown("0"))
             {
-                gui.ermitteleAktionAnhandEingabeUndAktivemMenue("0");
-                aktualisiere();
+                if (!generator.rotating)
+                {
+                    gui.ermitteleAktionAnhandEingabeUndAktivemMenue("0");
+                    aktualisiere();
+                    generator.tuerAuf = false;
+                }
             }
 
 
             if (Input.GetKeyDown("1"))
             {
-                gui.ermitteleAktionAnhandEingabeUndAktivemMenue("1");
-                aktualisiere();
+                if (!generator.rotating)
+                {
+                    gui.ermitteleAktionAnhandEingabeUndAktivemMenue("1");
+                    aktualisiere();
+                    generator.tuerAuf = false;
+                }
             }
 
             if (Input.GetKeyDown("2"))
             {
-                gui.ermitteleAktionAnhandEingabeUndAktivemMenue("2");
-                aktualisiere();
+                if (!generator.rotating)
+                {
+                    gui.ermitteleAktionAnhandEingabeUndAktivemMenue("2");
+                    aktualisiere();
+                    generator.tuerAuf = false;
+                }
             }
 
             if (Input.GetKeyDown("3"))
             {
-                gui.ermitteleAktionAnhandEingabeUndAktivemMenue("3");
-                aktualisiere();
+                if (!generator.rotating)
+                {
+                    gui.ermitteleAktionAnhandEingabeUndAktivemMenue("3");
+                    aktualisiere();
+                    generator.tuerAuf = false;
+                }
             }
 
             if (Input.GetKeyDown("4"))
             {
-                gui.ermitteleAktionAnhandEingabeUndAktivemMenue("4");
-                aktualisiere();
+                if (!generator.rotating)
+                {
+                    gui.ermitteleAktionAnhandEingabeUndAktivemMenue("4");
+                    aktualisiere();
+                    generator.tuerAuf = false;
+                }
             }
 
             if (Input.GetKeyDown("5"))
             {
-                gui.ermitteleAktionAnhandEingabeUndAktivemMenue("5");
-                aktualisiere();
+                if (!generator.rotating)
+                {
+                    gui.ermitteleAktionAnhandEingabeUndAktivemMenue("5");
+                    aktualisiere();
+                    generator.tuerAuf = false;
+                }
             }
 
             if (Input.GetKeyDown("6"))
             {
-                gui.ermitteleAktionAnhandEingabeUndAktivemMenue("6");
-                aktualisiere();
+                if (!generator.rotating)
+                {
+                    gui.ermitteleAktionAnhandEingabeUndAktivemMenue("6");
+                    aktualisiere();
+                    generator.tuerAuf = false;
+                }
             }
 
             if (Input.GetKeyDown("7"))
             {
-                gui.ermitteleAktionAnhandEingabeUndAktivemMenue("7");
-                aktualisiere();
+                if (!generator.rotating)
+                {
+                    gui.ermitteleAktionAnhandEingabeUndAktivemMenue("7");
+                    aktualisiere();
+                    generator.tuerAuf = false;
+                }
             }
             if (Input.GetKeyDown("8"))
             {
-                gui.ermitteleAktionAnhandEingabeUndAktivemMenue("8");
-                aktualisiere();
+                if (!generator.rotating)
+                {
+                    gui.ermitteleAktionAnhandEingabeUndAktivemMenue("8");
+                    aktualisiere();
+                    generator.tuerAuf = false;
+                }
             }
 
             if (Input.GetKeyDown("9"))
             {
-                gui.ermitteleAktionAnhandEingabeUndAktivemMenue("9");
-                aktualisiere();
+                if (!generator.rotating)
+                {
+                    gui.ermitteleAktionAnhandEingabeUndAktivemMenue("9");
+                    aktualisiere();
+                    generator.tuerAuf = false;
+                }
             }
 
 
@@ -120,22 +161,34 @@ public class Konfigurator : MonoBehaviour
             // toggle Menü Hauptmenü
             if (Input.GetKeyDown("f1"))
             {
-                gui.toggleMenue(gui.guiHauptmenue.Name, gui.guiCanvas.AktuellAktivesMenu);
-                aktualisiere();
+                if (!generator.rotating)
+                {
+                    gui.toggleMenue(gui.guiHauptmenue.Name, gui.guiCanvas.AktuellAktivesMenu);
+                    aktualisiere();
+                    generator.tuerAuf = false;
+                }
             }
 
             // Toggle Menü Innentür
             if (Input.GetKeyDown("f2"))
             {
-                gui.toggleMenue(gui.guiInnentuer.Name, gui.guiCanvas.AktuellAktivesMenu);
-                aktualisiere();
+                if (!generator.rotating)
+                {
+                    gui.toggleMenue(gui.guiInnentuer.Name, gui.guiCanvas.AktuellAktivesMenu);
+                    aktualisiere();
+                    generator.tuerAuf = false;
+                }
             }
 
             // Toggle Menü Konfigurator
             if (Input.GetKeyDown("f3"))
             {
-                gui.toggleMenue(gui.guiKonfigurator.Name, gui.guiCanvas.AktuellAktivesMenu);
-                aktualisiere();
+                if (!generator.rotating)
+                {
+                    gui.toggleMenue(gui.guiKonfigurator.Name, gui.guiCanvas.AktuellAktivesMenu);
+                    aktualisiere();
+                    generator.tuerAuf = false;
+                }
             }
         }
 
@@ -158,6 +211,11 @@ public class Konfigurator : MonoBehaviour
 
     void aktualisiere ()
     {
+        // Achsenspiegelung: aktuellen Status ermitteln
+        Vector3 v3 = GameObject.Find("INNENTUER").transform.localScale;
+        // Achsenspiegelung: Vor Platzierung der Objektteile kurz in die Ausgangssituation setzen
+        GameObject.Find("INNENTUER").transform.localScale = new Vector3(1, 1, 1);
+
         generator.oBT_Tuerblatt = gui.aktuelleGetoggelteInnentuer.Tuerblatt;
         generator.oBT_Zarge = gui.aktuelleGetoggelteInnentuer.Zarge; 
         generator.oBT_DrueckerFalz = gui.aktuelleGetoggelteInnentuer.DrueckerFalz;
@@ -216,6 +274,11 @@ public class Konfigurator : MonoBehaviour
         generator.materialKombinationSchwelle.Material3 = gui.aktuelleMaterialKombinationSchwelle.Material3;
 
         generator.toggleMaterial3();
+
+        // Achsenspiegelung: Nach Platzierung der Objektteile wieder in den aktuellen Status versetzen
+        GameObject.Find("INNENTUER").transform.localScale = v3;
+        // Achsenspiegelung: Update des Rotationswinkels
+        generator.rotationWinkel = gui.rotationWinkel;
     }
 
 }
