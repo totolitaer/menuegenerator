@@ -247,7 +247,7 @@ public class T_Tuerblatt
     public int BreiteDIN { get; set; }
     public int Kantenrundung { get; set; }
     public int Dornmass { get; set; }
-    public int Druckerhoehe { get; set; }
+    public int Drueckerhoehe { get; set; }
     public int Lochabstand { get; set; }
     public int Bandabstand { get; set; }
 }

@@ -494,7 +494,7 @@ public class GUI_Innentuer : MonoBehaviour
 
         //KonfiguratorZeileMaterial
         public int ZeileMaterialAnzahlMaterialOptionenX = 4;
-        public int ZeileMaterialAnzahlMaterialOptionenY = 2;
+        public int ZeileMaterialAnzahlMaterialOptionenY = 3;
         public int ZeileMaterialAnzahlMaterialAbstandX = 10;
         public int ZeileMaterialAnzahlMaterialAbstandY = 10;
         public string ZeileMaterialNameInCanvas = "KonfiguratorZeileMaterial";
@@ -1830,18 +1830,26 @@ public class GUI_Innentuer : MonoBehaviour
         {
 
             aktuelleAnzeigeKonfigurator.InfoText += " (" + (aktuelleGetoggelteInnentuer.Index + 1).ToString() + " von " + ergebnisInnentuer.Count().ToString() + ")";
-            aktuelleAnzeigeKonfigurator.InfoText += "\n" + ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Id;
+            //aktuelleAnzeigeKonfigurator.InfoText += "\n" + ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Id;
+            aktuelleAnzeigeKonfigurator.InfoText += "\n" + ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Detail;
 
             // Zeile 1 Zarge
             if (ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Zarge != null)
             {
-                aktuelleAnzeigeKonfigurator.ZeileHeader[0] = ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Zarge;
+                //aktuelleAnzeigeKonfigurator.ZeileHeader[0] = ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Zarge;
+                aktuelleAnzeigeKonfigurator.ZeileHeader[0] = "Zarge";
                 aktuelleAnzeigeKonfigurator.ZeileDetail[0] = tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Zarge).Detail;
+                aktuelleAnzeigeKonfigurator.ZeileDetail[0] += " | Hersteller: " + tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Zarge).Hersteller;
+                aktuelleAnzeigeKonfigurator.ZeileDetail[0] += " | Gewicht: " + tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Zarge).Gewicht + " g";
+                aktuelleAnzeigeKonfigurator.ZeileDetail[0] += "\nDIN HxB: " + tabelleZarge.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Zarge).HoeheDIN + "x";
+                aktuelleAnzeigeKonfigurator.ZeileDetail[0] += tabelleZarge.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Zarge).BreiteDIN + " mm";
+                aktuelleAnzeigeKonfigurator.ZeileDetail[0] += " | Wandstärke: " + tabelleZarge.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Zarge).Wandstaerke + " mm";
+                aktuelleAnzeigeKonfigurator.ZeileDetail[0] += " | Bekleidungsbreite: " + tabelleZarge.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Zarge).Bekleidungsbreite + " mm";
                 matJsonString = tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Zarge).MAT;
-                Debug.Log("matJsonString: " + matJsonString);
+                //Debug.Log("matJsonString: " + matJsonString);
                 List<MaterialKombination> materialKombinationZarge = JsonConvert.DeserializeObject<List<MaterialKombination>>(matJsonString);
-                aktuelleAnzeigeKonfigurator.AnzahlMaterialien[0] = materialKombinationZarge.Count();
 
+                aktuelleAnzeigeKonfigurator.AnzahlMaterialien[0] = materialKombinationZarge.Count();
                 aktuelleMaterialKombinationZarge.Material1 = null;
                 aktuelleMaterialKombinationZarge.Material2 = null;
                 aktuelleMaterialKombinationZarge.Material3 = null;
@@ -1864,8 +1872,16 @@ public class GUI_Innentuer : MonoBehaviour
             // Zeile 2 Tuerblatt
             if (ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Tuerblatt != null)
             {
-                aktuelleAnzeigeKonfigurator.ZeileHeader[1] = ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Tuerblatt;
+                //aktuelleAnzeigeKonfigurator.ZeileHeader[1] = ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Tuerblatt;
+                aktuelleAnzeigeKonfigurator.ZeileHeader[1] = "Türblatt: ";
                 aktuelleAnzeigeKonfigurator.ZeileDetail[1] = tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Tuerblatt).Detail;
+                aktuelleAnzeigeKonfigurator.ZeileDetail[1] += " | Hersteller: " + tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Tuerblatt).Hersteller;
+                aktuelleAnzeigeKonfigurator.ZeileDetail[1] += " | Gewicht: " + tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Tuerblatt).Gewicht + " g";
+                aktuelleAnzeigeKonfigurator.ZeileDetail[1] += "\nDIN HxB: " + tabelleTuerblatt.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Tuerblatt).HoeheDIN + "x";
+                aktuelleAnzeigeKonfigurator.ZeileDetail[1] += tabelleTuerblatt.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Tuerblatt).BreiteDIN + " mm";
+                aktuelleAnzeigeKonfigurator.ZeileDetail[1] += " | Kantenrundung: " + tabelleTuerblatt.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Tuerblatt).Kantenrundung + " mm";
+                aktuelleAnzeigeKonfigurator.ZeileDetail[1] += " | Drückerhöhe: " + tabelleTuerblatt.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Tuerblatt).Drueckerhoehe + " mm";
+
 
                 matJsonString = tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Tuerblatt).MAT;
                 //Debug.Log("matJsonString: " + matJsonString);
@@ -1897,8 +1913,14 @@ public class GUI_Innentuer : MonoBehaviour
             // Zeile 3 DrueckerFalz
             if (ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].DrueckerFalz != null)
             {
-                aktuelleAnzeigeKonfigurator.ZeileHeader[2] = ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].DrueckerFalz;
+                //aktuelleAnzeigeKonfigurator.ZeileHeader[2] = ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].DrueckerFalz;
+                aktuelleAnzeigeKonfigurator.ZeileHeader[2] = "Drücker Falz";
                 aktuelleAnzeigeKonfigurator.ZeileDetail[2] = tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].DrueckerFalz).Detail;
+
+                aktuelleAnzeigeKonfigurator.ZeileDetail[2] += " | Hersteller: " + tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].DrueckerFalz).Hersteller;
+                aktuelleAnzeigeKonfigurator.ZeileDetail[2] += " | Gewicht: " + tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].DrueckerFalz).Gewicht + " g";
+                aktuelleAnzeigeKonfigurator.ZeileDetail[2] += "\nLänge: " + tabelleDruecker.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].DrueckerFalz).Laenge;
+                aktuelleAnzeigeKonfigurator.ZeileDetail[2] += " | Lochabstand: " + tabelleDruecker.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].DrueckerFalz).Lochabstand + " mm";
 
                 matJsonString = tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].DrueckerFalz).MAT;
                 //Debug.Log("matJsonString: " + matJsonString);
@@ -1931,8 +1953,14 @@ public class GUI_Innentuer : MonoBehaviour
             // Zeile 4 DrueckerZier
             if (ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].DrueckerZier != null)
             {
-                aktuelleAnzeigeKonfigurator.ZeileHeader[3] = ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].DrueckerZier;
+                //aktuelleAnzeigeKonfigurator.ZeileHeader[3] = ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].DrueckerZier;
+                aktuelleAnzeigeKonfigurator.ZeileHeader[3] = "Drücker Zier"; ;
                 aktuelleAnzeigeKonfigurator.ZeileDetail[3] = tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].DrueckerZier).Detail;
+
+                aktuelleAnzeigeKonfigurator.ZeileDetail[3] += " | Hersteller: " + tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].DrueckerZier).Hersteller;
+                aktuelleAnzeigeKonfigurator.ZeileDetail[3] += " | Gewicht: " + tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].DrueckerZier).Gewicht + " g";
+                aktuelleAnzeigeKonfigurator.ZeileDetail[3] += "\nLänge: " + tabelleDruecker.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].DrueckerZier).Laenge;
+                aktuelleAnzeigeKonfigurator.ZeileDetail[3] += " | Lochabstand: " + tabelleDruecker.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].DrueckerZier).Lochabstand + " mm";
 
                 matJsonString = tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].DrueckerZier).MAT;
                 //Debug.Log("matJsonString: " + matJsonString);
@@ -1964,7 +1992,8 @@ public class GUI_Innentuer : MonoBehaviour
             // Zeile 5 Band1
             if (ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Band1 != null)
             {
-                aktuelleAnzeigeKonfigurator.ZeileHeader[4] = ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Band1;
+                //aktuelleAnzeigeKonfigurator.ZeileHeader[4] = ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Band1;
+                aktuelleAnzeigeKonfigurator.ZeileHeader[4] = "Band 1: " + tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Band1).Detail;
                 aktuelleAnzeigeKonfigurator.ZeileDetail[4] = tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Band1).Detail;
 
                 matJsonString = tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Band1).MAT;
@@ -1997,7 +2026,8 @@ public class GUI_Innentuer : MonoBehaviour
             // Zeile 6 Band2
             if (ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Band2 != null)
             {
-                aktuelleAnzeigeKonfigurator.ZeileHeader[5] = ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Band2;
+                //aktuelleAnzeigeKonfigurator.ZeileHeader[5] = ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Band2;
+                aktuelleAnzeigeKonfigurator.ZeileHeader[5] = "Band 2: " + tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Band2).Detail;
                 aktuelleAnzeigeKonfigurator.ZeileDetail[5] = tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Band2).Detail;
 
                 matJsonString = tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Band2).MAT;
@@ -2031,7 +2061,8 @@ public class GUI_Innentuer : MonoBehaviour
             // Zeile 7 Bandaufnahme1
             if (ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Bandaufnahme1 != null)
             {
-                aktuelleAnzeigeKonfigurator.ZeileHeader[6] = ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Bandaufnahme1;
+                //aktuelleAnzeigeKonfigurator.ZeileHeader[6] = ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Bandaufnahme1;
+                aktuelleAnzeigeKonfigurator.ZeileHeader[6] = "Bandaufnahme 1: " + tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Bandaufnahme1).Detail;
                 aktuelleAnzeigeKonfigurator.ZeileDetail[6] = tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Bandaufnahme1).Detail;
 
                 matJsonString = tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Bandaufnahme1).MAT;
@@ -2065,7 +2096,8 @@ public class GUI_Innentuer : MonoBehaviour
             // Zeile 8 Bandaufnahme2
             if (ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Bandaufnahme2 != null)
             {
-                aktuelleAnzeigeKonfigurator.ZeileHeader[7] = ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Bandaufnahme2;
+                //aktuelleAnzeigeKonfigurator.ZeileHeader[7] = ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Bandaufnahme2;
+                aktuelleAnzeigeKonfigurator.ZeileHeader[7] = "Bandaufnahme 2: " + tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Bandaufnahme2).Detail;
                 aktuelleAnzeigeKonfigurator.ZeileDetail[7] = tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Bandaufnahme2).Detail;
 
                 matJsonString = tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Bandaufnahme2).MAT;
@@ -2098,7 +2130,8 @@ public class GUI_Innentuer : MonoBehaviour
             // Zeile 9 Schlosskasten
             if (ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Schlosskasten != null)
             {
-                aktuelleAnzeigeKonfigurator.ZeileHeader[8] = ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Schlosskasten;
+                //aktuelleAnzeigeKonfigurator.ZeileHeader[8] = ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Schlosskasten;
+                aktuelleAnzeigeKonfigurator.ZeileHeader[8] = "Schloßkasten: " + tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Schlosskasten).Detail;
                 aktuelleAnzeigeKonfigurator.ZeileDetail[8] = tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Schlosskasten).Detail;
 
                 matJsonString = tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Schlosskasten).MAT;
@@ -2131,7 +2164,8 @@ public class GUI_Innentuer : MonoBehaviour
             // Zeile 10 Schliessblech
             if (ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Schliessblech != null)
             {
-                aktuelleAnzeigeKonfigurator.ZeileHeader[9] = ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Schliessblech;
+                //aktuelleAnzeigeKonfigurator.ZeileHeader[9] = ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Schliessblech;
+                aktuelleAnzeigeKonfigurator.ZeileHeader[9] = "Schließblech: " + tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Schliessblech).Detail;
                 aktuelleAnzeigeKonfigurator.ZeileDetail[9] = tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Schliessblech).Detail;
 
                 matJsonString = tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Schliessblech).MAT;
@@ -2164,7 +2198,8 @@ public class GUI_Innentuer : MonoBehaviour
             // Zeile 10 Schwelle
             if (ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Schwelle != null)
             {
-                aktuelleAnzeigeKonfigurator.ZeileHeader[10] = ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Schwelle;
+                //aktuelleAnzeigeKonfigurator.ZeileHeader[10] = ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Schwelle;
+                aktuelleAnzeigeKonfigurator.ZeileHeader[10] = "Schwelle: " + tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Schwelle).Detail;
                 aktuelleAnzeigeKonfigurator.ZeileDetail[10] = tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Schwelle).Detail;
 
                 matJsonString = tabelleObjektteil.Find(x => x.Id == ergebnisInnentuer[aktuelleGetoggelteInnentuer.Index].Schwelle).MAT;
@@ -2493,10 +2528,10 @@ public class GUI_Innentuer : MonoBehaviour
             //GameObject.Find(guiKonfigurator.ZeileDetailNameInCanvas + i.ToString()).GetComponent<Text>().text = tabelleObjektteil.Find(x => x.Id == "Band_001").Detail;
             GameObject.Find(guiKonfigurator.ZeileHeaderNameInCanvas + (zeileNr + 1).ToString()).GetComponent<Text>().text = aktuelleAnzeigeKonfigurator.ZeileHeader[zeileNr];
             GameObject.Find(guiKonfigurator.ZeileDetailNameInCanvas + (zeileNr + 1).ToString()).GetComponent<Text>().text = aktuelleAnzeigeKonfigurator.ZeileDetail[zeileNr];
-            // zeige das aktuelle Material im Infofeld an
-            GameObject.Find(guiKonfigurator.ZeileDetailNameInCanvas + (zeileNr + 1).ToString()).GetComponent<Text>().text += "\n" + aktuelleAnzeigeKonfigurator.AnzahlMaterialien[zeileNr];
-            GameObject.Find(guiKonfigurator.ZeileDetailNameInCanvas + (zeileNr + 1).ToString()).GetComponent<Text>().text += " | " + aktuelleAnzeigeKonfigurator.AktuellesMaterialIndex[zeileNr].ToString();
-            GameObject.Find(guiKonfigurator.ZeileDetailNameInCanvas + (zeileNr + 1).ToString()).GetComponent<Text>().text += " | " + aktuelleAnzeigeKonfigurator.AktuellesMaterialName[zeileNr];
+            //// zeige das aktuelle Material im Infofeld an
+            //GameObject.Find(guiKonfigurator.ZeileDetailNameInCanvas + (zeileNr + 1).ToString()).GetComponent<Text>().text += "\n" + aktuelleAnzeigeKonfigurator.AnzahlMaterialien[zeileNr];
+            //GameObject.Find(guiKonfigurator.ZeileDetailNameInCanvas + (zeileNr + 1).ToString()).GetComponent<Text>().text += " | " + aktuelleAnzeigeKonfigurator.AktuellesMaterialIndex[zeileNr].ToString();
+            //GameObject.Find(guiKonfigurator.ZeileDetailNameInCanvas + (zeileNr + 1).ToString()).GetComponent<Text>().text += " | " + aktuelleAnzeigeKonfigurator.AktuellesMaterialName[zeileNr];
 
             //Debug.Log("KonfiguratorZeileMaterial" + (zeileNr + 1).ToString() + (aktuelleAnzeigeKonfigurator.AktuellesMaterialIndex[zeileNr] + 1).ToString());
             GameObject.Find("KonfiguratorZeileMaterial" + (zeileNr + 1).ToString() + (aktuelleAnzeigeKonfigurator.AktuellesMaterialIndex[zeileNr] + 1).ToString()).GetComponent<CanvasGroup>().alpha = 1.0f;
@@ -2515,9 +2550,7 @@ public class GUI_Innentuer : MonoBehaviour
         updateAktuellGetoggelteInnentuer();
         updateAktuellGetoggeltesMaterial();
 
-        // Philipp
         updateSzene(aktuelleGetoggelteInnentuer, aktuelleGetoggelteMaterial);
-        // 
 
     }
 
